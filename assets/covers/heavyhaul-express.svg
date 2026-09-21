@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HeavyHaul Express cover treatment">
+<defs>
+  <linearGradient id="grad26" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow26" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#5f9bb8" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#5f9bb8" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain26"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad26)"/>
+<rect width="900" height="560" fill="url(#glow26)"/>
+<line x1="555" y1="50" x2="791" y2="124" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="791" y1="124" x2="856" y2="217" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="856" y1="217" x2="859" y2="72" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="859" y1="72" x2="755" y2="338" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="755" y1="338" x2="673" y2="301" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="673" y1="301" x2="812" y2="103" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><circle cx="555" cy="50" r="3" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="791" cy="124" r="3" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="856" cy="217" r="4" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="859" cy="72" r="2" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="755" cy="338" r="3" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="673" cy="301" r="3" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="812" cy="103" r="3" fill="#5f9bb8" fill-opacity="0.55"/>
+<rect width="900" height="560" filter="url(#grain26)"/>
+<g stroke="#5f9bb8" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">26 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#5f9bb8" fill-opacity="0.85" text-anchor="end">LOGISTICS &amp; TRANSPORTATION</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">HeavyHaul</tspan><tspan x="52" dy="44">Express</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#5f9bb8" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

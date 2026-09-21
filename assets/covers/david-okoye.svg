@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="David Okoye cover treatment">
+<defs>
+  <linearGradient id="grad17" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow17" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#5f9bb8" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#5f9bb8" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain17"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad17)"/>
+<rect width="900" height="560" fill="url(#glow17)"/>
+<line x1="834" y1="146" x2="702" y2="86" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="702" y1="86" x2="732" y2="282" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="732" y1="282" x2="810" y2="70" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="810" y1="70" x2="781" y2="152" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="781" y1="152" x2="632" y2="288" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><line x1="632" y1="288" x2="843" y2="133" stroke="#5f9bb8" stroke-opacity="0.16" stroke-width="1"/><circle cx="834" cy="146" r="3" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="702" cy="86" r="2" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="732" cy="282" r="2" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="810" cy="70" r="4" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="781" cy="152" r="4" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="632" cy="288" r="2" fill="#5f9bb8" fill-opacity="0.55"/><circle cx="843" cy="133" r="4" fill="#5f9bb8" fill-opacity="0.55"/>
+<rect width="900" height="560" filter="url(#grain17)"/>
+<g stroke="#5f9bb8" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">17 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#5f9bb8" fill-opacity="0.85" text-anchor="end">SOFTWARE ENGINEERING</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">David Okoye</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#5f9bb8" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Cooperative cover treatment">
+<defs>
+  <linearGradient id="grad49" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow49" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#8a7fc9" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#8a7fc9" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain49"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad49)"/>
+<rect width="900" height="560" fill="url(#glow49)"/>
+<circle cx="564" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="816" cy="60" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="564" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="816" cy="102" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="564" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="816" cy="144" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="564" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="816" cy="186" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="564" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="816" cy="228" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="564" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="606" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="648" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="690" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="732" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/><circle cx="774" cy="270" r="3.4" fill="#8a7fc9" fill-opacity="0.85"/><circle cx="816" cy="270" r="1.6" fill="#8a7fc9" fill-opacity="0.18"/>
+<rect width="900" height="560" filter="url(#grain49)"/>
+<g stroke="#8a7fc9" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">49 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#8a7fc9" fill-opacity="0.85" text-anchor="end">COMMUNITY FINANCE</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">The Cooperative</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#8a7fc9" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

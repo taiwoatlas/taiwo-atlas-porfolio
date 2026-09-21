@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restraint is a design decision, not the absence of one — Taiwo Atlas Journal</title>
+<meta name="description" content="On why this rebuild uses one accent colour, no gradients, and turns down more animation ideas than it keeps.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0e16">
+<link rel="canonical" href="https://taiwoatlas.dev/journal/restraint-is-a-design-decision.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Restraint is a design decision, not the absence of one — Taiwo Atlas Journal">
+<meta property="og:description" content="On why this rebuild uses one accent colour, no gradients, and turns down more animation ideas than it keeps.">
+<meta property="og:image" content="/assets/logo/taiwo-atlas-logo.png">
+<meta property="og:url" content="https://taiwoatlas.dev/journal/restraint-is-a-design-decision.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restraint is a design decision, not the absence of one — Taiwo Atlas Journal">
+<meta name="twitter:description" content="On why this rebuild uses one accent colour, no gradients, and turns down more animation ideas than it keeps.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo/taiwo-atlas-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/pages.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a href="/index.html" class="brand" aria-label="Taiwo Atlas — home">
+      <img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="36" height="36">
+      <span class="brand-mark">TAIWO ATLAS<small>Digital Experience Builder</small></span>
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="/work.html">Work</a>
+<a href="/about.html">About</a>
+<a href="/capabilities.html">Capabilities</a>
+<a href="/services.html">Services</a>
+<a href="/journal.html" class="is-active">Journal</a>
+<a href="/contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cmdk-trigger" data-cmdk-trigger aria-label="Open search (Command K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search <kbd>&#8984;K</kbd>
+      </button>
+      <a href="/contact.html" class="btn btn-outline" style="padding:.5rem .9rem;">Start a project</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <span class="brand-mark"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="30" height="30" style="display:inline-block;vertical-align:middle;margin-right:.5rem;border-radius:50%;">TAIWO ATLAS</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu-links" aria-label="Mobile">
+    <a href="/work.html">Work</a>
+<a href="/about.html">About</a>
+<a href="/capabilities.html">Capabilities</a>
+<a href="/services.html">Services</a>
+<a href="/journal.html" class="is-active">Journal</a>
+<a href="/contact.html">Contact</a>
+    <a href="/contact.html">Start a project</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></span>
+    <span><a href="tel:+2349011065513">+234 901 106 5513</a></span>
+  </div>
+</div>
+
+<div class="cmdk-overlay" data-cmdk-overlay>
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="cmdk-input" type="text" placeholder="Search projects, pages, articles…" aria-label="Search">
+      <span class="cmdk-esc">ESC</span>
+    </div>
+    <div class="cmdk-results"></div>
+  </div>
+</div>
+
+<main id="main">
+
+<article class="journal-article">
+  <p class="breadcrumb"><a href="/journal.html">Journal</a> / Restraint is a design decision, not the absence of one</p>
+  <div class="journal-meta-row"><span>Design Systems</span><span>2026-07-12</span><span>4 min read</span></div>
+  <h1 class="h1" style="margin-bottom:var(--sp-6);">Restraint is a design decision, not the absence of one</h1>
+  <div class="prose"><p>A brief describing a '£20 million website' invites exactly the wrong response: gradients, glass panels, oversized display type, motion on every scroll trigger. That's the visual language of a website trying to convince you it's expensive. It rarely works, and it ages badly within a year.</p><p>The interfaces that actually read as expensive tend to do less, more precisely. One accent colour, used only where a decision actually needs marking — an active filter, a status indicator, a call to action. Borders instead of shadows to define structure. Motion that responds to something the user did, not motion that plays because the page loaded.</p><p>Every animation in this rebuild had to answer one question before it was kept: does this help someone understand something, or does it just move? Header compaction on scroll answers yes — it recovers vertical space once the visitor no longer needs the full hero context. A parallax effect on a hero image, tested and cut, answered no.</p></div>
+</article>
+<section class="section" style="border-top:1px solid var(--c-border);">
+  <span class="label-muted">Related work</span>
+  <div class="related-grid" style="margin-top:var(--sp-5);">
+  <a class="card reveal" href="/work/locktech-security.html"><div class="card-meta"><span>Security &amp; Defense</span></div><h3>LockTech Security</h3></a><a class="card reveal" href="/work/docutrust.html"><div class="card-meta"><span>Document Technology</span></div><h3>DocuTrust</h3></a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-brand-line"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" width="28" height="28" style="display:inline-block;vertical-align:middle;border-radius:50%;margin-right:.5rem;">TAIWO ATLAS</div>
+        <p style="color:var(--c-text-secondary);max-width:32ch;font-size:.92rem;">Digital experience builder — information architecture, interface design and front-end engineering for organisations, professionals and platforms.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/search.html">Search</a>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <a href="/capabilities.html">Capabilities</a>
+        <a href="/services.html">Services</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <li><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></li>
+        <li><a href="tel:+2349011065513">+234 901 106 5513</a></li>
+        <li><a href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp: +234 901 106 5513</a></li>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Taiwo Atlas. All projects documented.</span>
+      <span>Built with restraint, not gradients.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/search-index.js"></script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mara Adeyemi Studio cover treatment">
+<defs>
+  <linearGradient id="grad33" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow33" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#6fa8e6" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#6fa8e6" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain33"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad33)"/>
+<rect width="900" height="560" fill="url(#glow33)"/>
+<circle cx="608" cy="151" r="150" fill="none" stroke="#6fa8e6" stroke-opacity="0.30" stroke-width="1"/><circle cx="608" cy="151" r="95" fill="none" stroke="#6fa8e6" stroke-opacity="0.23" stroke-width="1"/><circle cx="608" cy="151" r="45" fill="none" stroke="#6fa8e6" stroke-opacity="0.16" stroke-width="1"/><circle cx="713" cy="76" r="3" fill="#6fa8e6" fill-opacity="0.7"/>
+<rect width="900" height="560" filter="url(#grain33)"/>
+<g stroke="#6fa8e6" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">33 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#6fa8e6" fill-opacity="0.85" text-anchor="end">DESIGN</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">Mara Adeyemi</tspan><tspan x="52" dy="44">Studio</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#6fa8e6" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

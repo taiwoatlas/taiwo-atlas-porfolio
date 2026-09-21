@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation over decoration — Taiwo Atlas Journal</title>
+<meta name="description" content="What a mechanical engineer's field notes taught me about presenting technical work: show the specification, not the adjective.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0e16">
+<link rel="canonical" href="https://taiwoatlas.dev/journal/documentation-over-decoration.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Documentation over decoration — Taiwo Atlas Journal">
+<meta property="og:description" content="What a mechanical engineer's field notes taught me about presenting technical work: show the specification, not the adjective.">
+<meta property="og:image" content="/assets/logo/taiwo-atlas-logo.png">
+<meta property="og:url" content="https://taiwoatlas.dev/journal/documentation-over-decoration.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Documentation over decoration — Taiwo Atlas Journal">
+<meta name="twitter:description" content="What a mechanical engineer's field notes taught me about presenting technical work: show the specification, not the adjective.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo/taiwo-atlas-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/pages.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a href="/index.html" class="brand" aria-label="Taiwo Atlas — home">
+      <img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="36" height="36">
+      <span class="brand-mark">TAIWO ATLAS<small>Digital Experience Builder</small></span>
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="/work.html">Work</a>
+<a href="/about.html">About</a>
+<a href="/capabilities.html">Capabilities</a>
+<a href="/services.html">Services</a>
+<a href="/journal.html" class="is-active">Journal</a>
+<a href="/contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cmdk-trigger" data-cmdk-trigger aria-label="Open search (Command K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search <kbd>&#8984;K</kbd>
+      </button>
+      <a href="/contact.html" class="btn btn-outline" style="padding:.5rem .9rem;">Start a project</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <span class="brand-mark"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="30" height="30" style="display:inline-block;vertical-align:middle;margin-right:.5rem;border-radius:50%;">TAIWO ATLAS</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu-links" aria-label="Mobile">
+    <a href="/work.html">Work</a>
+<a href="/about.html">About</a>
+<a href="/capabilities.html">Capabilities</a>
+<a href="/services.html">Services</a>
+<a href="/journal.html" class="is-active">Journal</a>
+<a href="/contact.html">Contact</a>
+    <a href="/contact.html">Start a project</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></span>
+    <span><a href="tel:+2349011065513">+234 901 106 5513</a></span>
+  </div>
+</div>
+
+<div class="cmdk-overlay" data-cmdk-overlay>
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="cmdk-input" type="text" placeholder="Search projects, pages, articles…" aria-label="Search">
+      <span class="cmdk-esc">ESC</span>
+    </div>
+    <div class="cmdk-results"></div>
+  </div>
+</div>
+
+<main id="main">
+
+<article class="journal-article">
+  <p class="breadcrumb"><a href="/journal.html">Journal</a> / Documentation over decoration</p>
+  <div class="journal-meta-row"><span>Case Studies</span><span>2026-09-08</span><span>6 min read</span></div>
+  <h1 class="h1" style="margin-bottom:var(--sp-6);">Documentation over decoration</h1>
+  <div class="prose"><p>Most engineering and technical portfolios reach for the same word: 'passionate.' It shows up in bios, in project intros, in the closing line of a case study that otherwise had nothing wrong with it. The word is doing no work — it's a placeholder for evidence the writer didn't have time to gather.</p><p>While rebuilding this archive, I spent a long time with a reference build for a mechanical and systems engineer whose site never once claims expertise. It shows a system diagram, lets you tap a component, and gives you the spec. It shows a before-and-after slider with a diesel-consumption number attached, not a description of 'significant savings.'</p><p>The lesson generalises past engineering. A frontend case study that says 'built a fast, accessible interface' is making the same unearned claim as 'passionate developer.' The fix is the same in both cases: replace the adjective with the artifact. Show the filter interaction instead of describing it as intuitive. Show the before-and-after of a cluttered navigation instead of calling the redesign 'cleaner.'</p><p>This is why every case study in this archive is built around the same four-part discipline borrowed from that reference: what the interface needed to do, why it was structured that way, what it actually looks like doing it, and what changed. Adjectives are optional. Evidence isn't.</p></div>
+</article>
+<section class="section" style="border-top:1px solid var(--c-border);">
+  <span class="label-muted">Related work</span>
+  <div class="related-grid" style="margin-top:var(--sp-5);">
+  <a class="card reveal" href="/work/daniel-adeyemi.html"><div class="card-meta"><span>Engineering</span></div><h3>Daniel Adeyemi</h3></a><a class="card reveal" href="/work/locktech-security.html"><div class="card-meta"><span>Security &amp; Defense</span></div><h3>LockTech Security</h3></a><a class="card reveal" href="/work/terradrop-irrigation.html"><div class="card-meta"><span>Agricultural Technology</span></div><h3>TerraDrop Irrigation</h3></a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-brand-line"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" width="28" height="28" style="display:inline-block;vertical-align:middle;border-radius:50%;margin-right:.5rem;">TAIWO ATLAS</div>
+        <p style="color:var(--c-text-secondary);max-width:32ch;font-size:.92rem;">Digital experience builder — information architecture, interface design and front-end engineering for organisations, professionals and platforms.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/search.html">Search</a>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <a href="/capabilities.html">Capabilities</a>
+        <a href="/services.html">Services</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <li><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></li>
+        <li><a href="tel:+2349011065513">+234 901 106 5513</a></li>
+        <li><a href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp: +234 901 106 5513</a></li>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Taiwo Atlas. All projects documented.</span>
+      <span>Built with restraint, not gradients.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/search-index.js"></script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>

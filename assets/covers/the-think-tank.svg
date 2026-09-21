@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Think Tank cover treatment">
+<defs>
+  <linearGradient id="grad52" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow52" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#4c6e9b" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#4c6e9b" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain52"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad52)"/>
+<rect width="900" height="560" fill="url(#glow52)"/>
+<path d="M -20 90 Q 0 99 20 90 Q 40 81 60 90 Q 80 99 100 90 Q 120 81 140 90 Q 160 99 180 90 Q 200 81 220 90 Q 240 99 260 90 Q 280 81 300 90 Q 320 99 340 90 Q 360 81 380 90 Q 400 99 420 90 Q 440 81 460 90 Q 480 99 500 90 Q 520 81 540 90 Q 560 99 580 90 Q 600 81 620 90 Q 640 99 660 90 Q 680 81 700 90 Q 720 99 740 90 Q 760 81 780 90 Q 800 99 820 90 Q 840 81 860 90 Q 880 99 900 90 Q 920 81 940 90 " fill="none" stroke="#4c6e9b" stroke-opacity="0.22" stroke-width="1.2"/><path d="M -20 124 Q 0 117 20 124 Q 40 131 60 124 Q 80 117 100 124 Q 120 131 140 124 Q 160 117 180 124 Q 200 131 220 124 Q 240 117 260 124 Q 280 131 300 124 Q 320 117 340 124 Q 360 131 380 124 Q 400 117 420 124 Q 440 131 460 124 Q 480 117 500 124 Q 520 131 540 124 Q 560 117 580 124 Q 600 131 620 124 Q 640 117 660 124 Q 680 131 700 124 Q 720 117 740 124 Q 760 131 780 124 Q 800 117 820 124 Q 840 131 860 124 Q 880 117 900 124 Q 920 131 940 124 " fill="none" stroke="#4c6e9b" stroke-opacity="0.19" stroke-width="1.2"/><path d="M -20 158 Q 0 150 20 158 Q 40 166 60 158 Q 80 150 100 158 Q 120 166 140 158 Q 160 150 180 158 Q 200 166 220 158 Q 240 150 260 158 Q 280 166 300 158 Q 320 150 340 158 Q 360 166 380 158 Q 400 150 420 158 Q 440 166 460 158 Q 480 150 500 158 Q 520 166 540 158 Q 560 150 580 158 Q 600 166 620 158 Q 640 150 660 158 Q 680 166 700 158 Q 720 150 740 158 Q 760 166 780 158 Q 800 150 820 158 Q 840 166 860 158 Q 880 150 900 158 Q 920 166 940 158 " fill="none" stroke="#4c6e9b" stroke-opacity="0.16" stroke-width="1.2"/><path d="M -20 192 Q 0 202 20 192 Q 40 182 60 192 Q 80 202 100 192 Q 120 182 140 192 Q 160 202 180 192 Q 200 182 220 192 Q 240 202 260 192 Q 280 182 300 192 Q 320 202 340 192 Q 360 182 380 192 Q 400 202 420 192 Q 440 182 460 192 Q 480 202 500 192 Q 520 182 540 192 Q 560 202 580 192 Q 600 182 620 192 Q 640 202 660 192 Q 680 182 700 192 Q 720 202 740 192 Q 760 182 780 192 Q 800 202 820 192 Q 840 182 860 192 Q 880 202 900 192 Q 920 182 940 192 " fill="none" stroke="#4c6e9b" stroke-opacity="0.13" stroke-width="1.2"/>
+<rect width="900" height="560" filter="url(#grain52)"/>
+<g stroke="#4c6e9b" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">52 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#4c6e9b" fill-opacity="0.85" text-anchor="end">RESEARCH / POLICY</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">The Think Tank</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#4c6e9b" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

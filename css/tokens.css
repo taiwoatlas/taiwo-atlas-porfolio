@@ -1,0 +1,81 @@
+:root{
+  /* --- color: canvas & surfaces — tuned to match Taiwo's own portrait (cool navy / electric blue / magenta) --- */
+  --c-canvas:#0a0e16;
+  --c-surface:#10141f;
+  --c-surface-2:#161c2b;
+  --c-border:#232c40;
+  --c-border-strong:#39455f;
+
+  --c-text:#eef0f4;
+  --c-text-secondary:#a9b2c4;
+  --c-text-muted:#6d7891;
+  --c-inverse:#0a0e16;
+
+  --c-accent:#6fa8e6;         /* electric blue, pulled from the portrait's window light */
+  --c-accent-dim:#4c6e9b;
+  --c-accent-2:#d76fe1;       /* magenta, pulled from the portrait's neon backdrop — used sparingly */
+  --c-success:#5fa876;
+  --c-warning:#c98a3f;
+  --c-error:#d16b7a;
+
+  --c-canvas-light:#f6f5f2;
+  --c-surface-light:#ffffff;
+
+  /* --- type scale (fluid) --- */
+  --f-display: clamp(2.6rem, 3.2vw + 1.6rem, 6.4rem);
+  --f-h1: clamp(2.1rem, 2vw + 1.4rem, 3.6rem);
+  --f-h2: clamp(1.6rem, 1.2vw + 1.2rem, 2.4rem);
+  --f-h3: clamp(1.2rem, 0.6vw + 1rem, 1.6rem);
+  --f-body-lg: 1.125rem;
+  --f-body: 1rem;
+  --f-small: 0.875rem;
+  --f-micro: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-normal: 1.55;
+
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* --- spacing scale --- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+  --sp-9: 6.5rem;
+  --sp-10: 9rem;
+
+  /* --- containers --- */
+  --container-max: 1360px;
+  --container-wide: 1600px;
+  --container-narrow: 720px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* --- radii / shadows / motion --- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 14px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-2: 0 12px 40px rgba(0,0,0,.45);
+  --dur-fast: 140ms;
+  --dur-med: 320ms;
+  --dur-slow: 620ms;
+  --ease: cubic-bezier(.22,.61,.36,1);
+
+  --header-h: 84px;
+  --header-h-compact: 60px;
+
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-palette: 300;
+}
+
+@media (prefers-color-scheme: light){
+  /* reserved for future light theme; site defaults to dark editorial identity */
+}

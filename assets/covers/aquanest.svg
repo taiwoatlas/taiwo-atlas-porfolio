@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AquaNest cover treatment">
+<defs>
+  <linearGradient id="grad10" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow10" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#4c6e9b" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#4c6e9b" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain10"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad10)"/>
+<rect width="900" height="560" fill="url(#glow10)"/>
+<path d="M -20 90 Q 0 80 20 90 Q 40 100 60 90 Q 80 80 100 90 Q 120 100 140 90 Q 160 80 180 90 Q 200 100 220 90 Q 240 80 260 90 Q 280 100 300 90 Q 320 80 340 90 Q 360 100 380 90 Q 400 80 420 90 Q 440 100 460 90 Q 480 80 500 90 Q 520 100 540 90 Q 560 80 580 90 Q 600 100 620 90 Q 640 80 660 90 Q 680 100 700 90 Q 720 80 740 90 Q 760 100 780 90 Q 800 80 820 90 Q 840 100 860 90 Q 880 80 900 90 Q 920 100 940 90 " fill="none" stroke="#4c6e9b" stroke-opacity="0.22" stroke-width="1.2"/><path d="M -20 124 Q 0 136 20 124 Q 40 112 60 124 Q 80 136 100 124 Q 120 112 140 124 Q 160 136 180 124 Q 200 112 220 124 Q 240 136 260 124 Q 280 112 300 124 Q 320 136 340 124 Q 360 112 380 124 Q 400 136 420 124 Q 440 112 460 124 Q 480 136 500 124 Q 520 112 540 124 Q 560 136 580 124 Q 600 112 620 124 Q 640 136 660 124 Q 680 112 700 124 Q 720 136 740 124 Q 760 112 780 124 Q 800 136 820 124 Q 840 112 860 124 Q 880 136 900 124 Q 920 112 940 124 " fill="none" stroke="#4c6e9b" stroke-opacity="0.19" stroke-width="1.2"/><path d="M -20 158 Q 0 148 20 158 Q 40 168 60 158 Q 80 148 100 158 Q 120 168 140 158 Q 160 148 180 158 Q 200 168 220 158 Q 240 148 260 158 Q 280 168 300 158 Q 320 148 340 158 Q 360 168 380 158 Q 400 148 420 158 Q 440 168 460 158 Q 480 148 500 158 Q 520 168 540 158 Q 560 148 580 158 Q 600 168 620 158 Q 640 148 660 158 Q 680 168 700 158 Q 720 148 740 158 Q 760 168 780 158 Q 800 148 820 158 Q 840 168 860 158 Q 880 148 900 158 Q 920 168 940 158 " fill="none" stroke="#4c6e9b" stroke-opacity="0.16" stroke-width="1.2"/><path d="M -20 192 Q 0 202 20 192 Q 40 182 60 192 Q 80 202 100 192 Q 120 182 140 192 Q 160 202 180 192 Q 200 182 220 192 Q 240 202 260 192 Q 280 182 300 192 Q 320 202 340 192 Q 360 182 380 192 Q 400 202 420 192 Q 440 182 460 192 Q 480 202 500 192 Q 520 182 540 192 Q 560 202 580 192 Q 600 182 620 192 Q 640 202 660 192 Q 680 182 700 192 Q 720 202 740 192 Q 760 182 780 192 Q 800 202 820 192 Q 840 182 860 192 Q 880 202 900 192 Q 920 182 940 192 " fill="none" stroke="#4c6e9b" stroke-opacity="0.13" stroke-width="1.2"/>
+<rect width="900" height="560" filter="url(#grain10)"/>
+<g stroke="#4c6e9b" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">10 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#4c6e9b" fill-opacity="0.85" text-anchor="end">WATER &amp; ENVIRONMENTAL SYSTEM</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">AquaNest</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#4c6e9b" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

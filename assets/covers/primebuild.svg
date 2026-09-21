@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PrimeBuild cover treatment">
+<defs>
+  <linearGradient id="grad40" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow40" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#4c6e9b" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#4c6e9b" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain40"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad40)"/>
+<rect width="900" height="560" fill="url(#glow40)"/>
+<path d="M -20 90 Q 0 100 20 90 Q 40 80 60 90 Q 80 100 100 90 Q 120 80 140 90 Q 160 100 180 90 Q 200 80 220 90 Q 240 100 260 90 Q 280 80 300 90 Q 320 100 340 90 Q 360 80 380 90 Q 400 100 420 90 Q 440 80 460 90 Q 480 100 500 90 Q 520 80 540 90 Q 560 100 580 90 Q 600 80 620 90 Q 640 100 660 90 Q 680 80 700 90 Q 720 100 740 90 Q 760 80 780 90 Q 800 100 820 90 Q 840 80 860 90 Q 880 100 900 90 Q 920 80 940 90 " fill="none" stroke="#4c6e9b" stroke-opacity="0.22" stroke-width="1.2"/><path d="M -20 124 Q 0 134 20 124 Q 40 114 60 124 Q 80 134 100 124 Q 120 114 140 124 Q 160 134 180 124 Q 200 114 220 124 Q 240 134 260 124 Q 280 114 300 124 Q 320 134 340 124 Q 360 114 380 124 Q 400 134 420 124 Q 440 114 460 124 Q 480 134 500 124 Q 520 114 540 124 Q 560 134 580 124 Q 600 114 620 124 Q 640 134 660 124 Q 680 114 700 124 Q 720 134 740 124 Q 760 114 780 124 Q 800 134 820 124 Q 840 114 860 124 Q 880 134 900 124 Q 920 114 940 124 " fill="none" stroke="#4c6e9b" stroke-opacity="0.19" stroke-width="1.2"/><path d="M -20 158 Q 0 149 20 158 Q 40 167 60 158 Q 80 149 100 158 Q 120 167 140 158 Q 160 149 180 158 Q 200 167 220 158 Q 240 149 260 158 Q 280 167 300 158 Q 320 149 340 158 Q 360 167 380 158 Q 400 149 420 158 Q 440 167 460 158 Q 480 149 500 158 Q 520 167 540 158 Q 560 149 580 158 Q 600 167 620 158 Q 640 149 660 158 Q 680 167 700 158 Q 720 149 740 158 Q 760 167 780 158 Q 800 149 820 158 Q 840 167 860 158 Q 880 149 900 158 Q 920 167 940 158 " fill="none" stroke="#4c6e9b" stroke-opacity="0.16" stroke-width="1.2"/><path d="M -20 192 Q 0 200 20 192 Q 40 184 60 192 Q 80 200 100 192 Q 120 184 140 192 Q 160 200 180 192 Q 200 184 220 192 Q 240 200 260 192 Q 280 184 300 192 Q 320 200 340 192 Q 360 184 380 192 Q 400 200 420 192 Q 440 184 460 192 Q 480 200 500 192 Q 520 184 540 192 Q 560 200 580 192 Q 600 184 620 192 Q 640 200 660 192 Q 680 184 700 192 Q 720 200 740 192 Q 760 184 780 192 Q 800 200 820 192 Q 840 184 860 192 Q 880 200 900 192 Q 920 184 940 192 " fill="none" stroke="#4c6e9b" stroke-opacity="0.13" stroke-width="1.2"/>
+<rect width="900" height="560" filter="url(#grain40)"/>
+<g stroke="#4c6e9b" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">40 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#4c6e9b" fill-opacity="0.85" text-anchor="end">CONSTRUCTION</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">PrimeBuild</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#4c6e9b" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Akọ́kọ́ Water Initiative cover treatment">
+<defs>
+  <linearGradient id="grad6" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d1220"/>
+    <stop offset="55%" stop-color="#0a0e16"/>
+    <stop offset="100%" stop-color="#0a0d18"/>
+  </linearGradient>
+  <radialGradient id="glow6" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#4c6e9b" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#4c6e9b" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="grain6"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#grad6)"/>
+<rect width="900" height="560" fill="url(#glow6)"/>
+<path d="M -20 90 Q 0 98 20 90 Q 40 82 60 90 Q 80 98 100 90 Q 120 82 140 90 Q 160 98 180 90 Q 200 82 220 90 Q 240 98 260 90 Q 280 82 300 90 Q 320 98 340 90 Q 360 82 380 90 Q 400 98 420 90 Q 440 82 460 90 Q 480 98 500 90 Q 520 82 540 90 Q 560 98 580 90 Q 600 82 620 90 Q 640 98 660 90 Q 680 82 700 90 Q 720 98 740 90 Q 760 82 780 90 Q 800 98 820 90 Q 840 82 860 90 Q 880 98 900 90 Q 920 82 940 90 " fill="none" stroke="#4c6e9b" stroke-opacity="0.22" stroke-width="1.2"/><path d="M -20 124 Q 0 112 20 124 Q 40 136 60 124 Q 80 112 100 124 Q 120 136 140 124 Q 160 112 180 124 Q 200 136 220 124 Q 240 112 260 124 Q 280 136 300 124 Q 320 112 340 124 Q 360 136 380 124 Q 400 112 420 124 Q 440 136 460 124 Q 480 112 500 124 Q 520 136 540 124 Q 560 112 580 124 Q 600 136 620 124 Q 640 112 660 124 Q 680 136 700 124 Q 720 112 740 124 Q 760 136 780 124 Q 800 112 820 124 Q 840 136 860 124 Q 880 112 900 124 Q 920 136 940 124 " fill="none" stroke="#4c6e9b" stroke-opacity="0.19" stroke-width="1.2"/><path d="M -20 158 Q 0 146 20 158 Q 40 170 60 158 Q 80 146 100 158 Q 120 170 140 158 Q 160 146 180 158 Q 200 170 220 158 Q 240 146 260 158 Q 280 170 300 158 Q 320 146 340 158 Q 360 170 380 158 Q 400 146 420 158 Q 440 170 460 158 Q 480 146 500 158 Q 520 170 540 158 Q 560 146 580 158 Q 600 170 620 158 Q 640 146 660 158 Q 680 170 700 158 Q 720 146 740 158 Q 760 170 780 158 Q 800 146 820 158 Q 840 170 860 158 Q 880 146 900 158 Q 920 170 940 158 " fill="none" stroke="#4c6e9b" stroke-opacity="0.16" stroke-width="1.2"/><path d="M -20 192 Q 0 204 20 192 Q 40 180 60 192 Q 80 204 100 192 Q 120 180 140 192 Q 160 204 180 192 Q 200 180 220 192 Q 240 204 260 192 Q 280 180 300 192 Q 320 204 340 192 Q 360 180 380 192 Q 400 204 420 192 Q 440 180 460 192 Q 480 204 500 192 Q 520 180 540 192 Q 560 204 580 192 Q 600 180 620 192 Q 640 204 660 192 Q 680 180 700 192 Q 720 204 740 192 Q 760 180 780 192 Q 800 204 820 192 Q 840 180 860 192 Q 880 204 900 192 Q 920 180 940 192 " fill="none" stroke="#4c6e9b" stroke-opacity="0.13" stroke-width="1.2"/>
+<rect width="900" height="560" filter="url(#grain6)"/>
+<g stroke="#4c6e9b" stroke-opacity="0.55" stroke-width="1.2" fill="none">
+  <path d="M 30 54 L 30 30 L 54 30"/>
+  <path d="M 846 506 L 870 506 L 870 482"/>
+</g>
+<text x="52" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6d7891">06 / 50+</text>
+<text x="848" y="42" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#4c6e9b" fill-opacity="0.85" text-anchor="end">NONPROFIT / WASH</text>
+<text x="52" y="466" font-family="Fraunces, serif" font-size="38" fill="#eef0f4" font-weight="500"><tspan x="52" dy="0">Akọ́kọ́ Water</tspan><tspan x="52" dy="44">Initiative</tspan></text>
+<line x1="52" y1="486" x2="130" y2="486" stroke="#4c6e9b" stroke-opacity="0.6" stroke-width="1.5"/>
+</svg>
