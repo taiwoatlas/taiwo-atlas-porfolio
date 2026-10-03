@@ -4,9 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start a Project — Taiwo Atlas</title>
-<meta name="description" content="Write to Taiwo Atlas about your project — a straightforward way to start the conversation.">
+<meta name="description" content="Start a conversation about a digital experience, website, product, or web project with Taiwo Atlas.">
 <meta name="theme-color" content="#0a0e16">
 <link rel="canonical" href="https://taiwoatlas.dev/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Taiwo Atlas">
+<meta property="og:title" content="Start a Project — Taiwo Atlas">
+<meta property="og:description" content="Start a conversation about a digital experience, website, product, or web project with Taiwo Atlas.">
+<meta property="og:url" content="https://taiwoatlas.dev/contact.html">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,51 +20,177 @@
 <link rel="stylesheet" href="/css/tokens.css">
 <link rel="stylesheet" href="/css/base.css">
 <link rel="stylesheet" href="/css/components.css">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-.letter{max-width:640px;margin:0 auto;padding:var(--sp-6) var(--sp-5) 6rem}
-.letter-date{font-size:.85rem;color:var(--c-text-muted);margin-bottom:var(--sp-6)}
-.letter-open{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.9rem,2.6vw+1.2rem,2.8rem);line-height:1.28;letter-spacing:-.01em}
-.letter-open em{font-style:italic;color:var(--c-accent)}
-.ink{opacity:0;animation:inkin .05s linear forwards}
-@keyframes inkin{to{opacity:1}}
-.letter-body{margin-top:var(--sp-6);font-size:1.15rem;line-height:1.75;color:var(--c-text-secondary)}
-.letter-body p{margin-bottom:1.6em}
-.letter-body strong{color:var(--c-text);font-weight:600}
+.contact{--text:var(--c-text,#ece8e1);--text2:var(--c-text-secondary,#b5b8c0);--muted:var(--c-text-muted,#7d838f);--accent:var(--c-accent,#c9a46a);--line:var(--c-border,#232a38);--line2:var(--c-border-strong,#3a4356);--bg:var(--c-canvas,#0a0e16);--err:#e0836f;--pad:clamp(1.25rem,4.5vw,4rem);--gap:clamp(1rem,2vw,2rem);--ease:cubic-bezier(.2,.7,.1,1);overflow-x:clip}
+.contact *{box-sizing:border-box}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.serif{font-family:'Fraunces',serif}
+.label{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.contact a:focus-visible,.contact button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
-.blank{display:inline-block;position:relative;font-family:'Fraunces',serif;font-style:italic;color:var(--c-text);border-bottom:1px solid var(--c-border-strong);padding:0 .15em;min-width:1.5em}
-.blank:empty::before{content:attr(data-ph);color:var(--c-text-muted);font-style:normal;font-family:'Inter',sans-serif;font-size:.78em}
+/* hero */
+.hero{min-height:calc(100svh - 72px);padding:clamp(3rem,9vh,6rem) 0 2.5rem;display:flex;flex-direction:column}
+.hero .grid{flex:1;align-content:space-between;row-gap:3rem}
+.hero .label{grid-column:1/-1;display:flex;align-items:center;gap:1rem}
+.hero .label::after{content:'';width:3.5rem;height:1px;background:var(--line2)}
+.hero h1{grid-column:1/9;font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.6rem,8.6vw,8.25rem);line-height:.98;letter-spacing:-.035em;margin:0}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .line>span{display:block}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-aside{grid-column:9/13;align-self:end;border-left:1px solid var(--line);padding-left:var(--gap)}
+.hero-aside p{font-size:1.05rem;line-height:1.7;color:var(--text2);margin:0 0 2rem;max-width:44ch}
+.meta{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.scroll-cue{grid-column:1/-1;display:flex;align-items:center;gap:1rem}
+.scroll-cue i{width:1px;height:2.5rem;background:var(--line2);position:relative;overflow:hidden}
+.scroll-cue i::after{content:'';position:absolute;inset:0;background:var(--accent);transform:translateY(-100%);animation:cue 2.4s var(--ease) infinite 2.2s}
+@keyframes cue{60%,100%{transform:translateY(100%)}}
+.js .hero h1 .line>span{transform:translateY(108%);animation:rise 1s var(--ease) forwards;animation-delay:var(--d)}
+.js .fadein{opacity:0;transform:translateY(14px);animation:fade .9s var(--ease) forwards;animation-delay:var(--d)}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1;transform:none}}
 
-.q{margin-top:3.2rem}
-.q-ask{font-family:'Fraunces',serif;font-size:1.3rem;font-style:italic;color:var(--c-text);margin-bottom:.9rem;max-width:36ch}
-.q input,.q textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--c-border);color:var(--c-text);font-size:1.15rem;font-family:'Inter',sans-serif;padding:.5rem 0;outline:none;resize:vertical;transition:border-color .2s}
-.q textarea{min-height:3.6rem;line-height:1.5}
-.q input:focus,.q textarea:focus{border-color:var(--c-accent)}
-.q .req{color:var(--c-text-muted);font-size:.8rem;margin-top:.5rem;display:none}
-.q.has-err .req{display:block;color:#e0836f}
-.q.has-err input,.q.has-err textarea{border-color:#e0836f}
+/* hero→form transition */
+.rule{padding:1.5rem 0 0}
+.rule-line{height:1px;background:var(--line2)}
+.rule-labels{position:relative;height:2.5rem;padding-top:.9rem}
+.rule-labels span{position:absolute;left:0;transition:opacity .5s}
+.rule .l1{opacity:0}
+.js .rule .l1{opacity:1;transition-delay:.9s}
+.js .rule.in .l1{opacity:0}
+.js .rule:not(.in) .l2{opacity:0}
+.js .rule .l2{transition-delay:1.1s}
+.js .rule-line{transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--ease)}
+.js .rule.in .rule-line{transform:none}
 
-.choices{display:flex;flex-wrap:wrap;gap:.4em .6em;margin-top:.4rem}
-.choice{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:var(--c-text-secondary);border-bottom:1px dashed var(--c-border-strong);cursor:pointer;padding:.1em 0;transition:color .2s,border-color .2s}
-.choice:hover{color:var(--c-text)}
-.choice.sel{color:var(--c-accent);border-color:var(--c-accent);border-bottom-style:solid}
+/* progress */
+.progress{position:sticky;top:var(--header-h,0px);z-index:5;display:flex;align-items:center;gap:1.25rem;padding:.9rem 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.progress .p-count{color:var(--text);font-variant-numeric:tabular-nums}
+.progress .p-bar{flex:1;height:1px;background:var(--line2);position:relative}
+.progress .p-bar i{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
 
-.sign{margin-top:4rem;padding-top:2.5rem;border-top:1px solid var(--c-border)}
-.sign p{font-family:'Fraunces',serif;font-size:1.3rem;font-style:italic;color:var(--c-text-secondary);margin-bottom:1.6rem}
-.sendbtn{font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;background:var(--c-text);color:var(--c-canvas);border:0;padding:.95rem 1.7rem;border-radius:2px;cursor:pointer;transition:opacity .2s}
-.sendbtn:disabled{opacity:.5}
-.sendbtn:hover{opacity:.88}
+/* steps */
+.step{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding:clamp(3rem,8vw,6.5rem) 0;border-bottom:1px solid var(--line)}
+.step-head{grid-column:1/4;align-self:start;position:sticky;top:calc(var(--header-h,0px) + 5rem)}
+.step-head .num{display:block;font-family:'Fraunces',serif;font-size:clamp(3.5rem,6vw,5.5rem);line-height:1;color:var(--accent);font-weight:400;letter-spacing:-.03em;margin-bottom:.8rem}
+.step-body{grid-column:4/12;border:0;margin:0;padding:0;min-width:0}
+.field{margin:0 0 3rem;border:0;padding:0;min-width:0}
+.field:last-child{margin-bottom:0}
+.q{display:block;padding:0;font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.25;letter-spacing:-.015em;color:var(--text);margin-bottom:.5rem}
+.q small{font:400 .8rem 'Inter',sans-serif;letter-spacing:.04em;color:var(--muted);margin-left:.6rem;white-space:nowrap}
+.hint{display:block;font-size:.95rem;color:var(--muted);line-height:1.6;margin:0 0 1.1rem;max-width:56ch}
+.in{display:block;width:100%;min-height:56px;background:transparent;border:0;border-bottom:1px solid var(--line2);border-radius:0;color:var(--text2);font:400 clamp(1.1rem,1.5vw,1.3rem)/1.5 'Inter',sans-serif;padding:.8rem 0;outline:none;transition:border-color .3s,box-shadow .3s,color .3s;color-scheme:dark}
+.in::placeholder{color:var(--muted);opacity:.8}
+.in:hover{border-color:var(--muted)}
+.in:focus{border-color:var(--accent);box-shadow:0 1px 0 0 var(--accent)}
+.in:not(:placeholder-shown){color:var(--text)}
+textarea.in{min-height:9rem;resize:none;line-height:1.65;padding-top:1rem}
+.field.has-err .in{border-color:var(--err);box-shadow:0 1px 0 0 var(--err)}
+.err{color:var(--err);font-size:.92rem;margin:.7rem 0 0;animation:errin .4s var(--ease)}
+.err:empty{display:none}
+@keyframes errin{from{opacity:0;transform:translateY(-6px)}}
+.count{font-size:.8rem;color:var(--muted);text-align:right;margin-top:.4rem;font-variant-numeric:tabular-nums}
 
-.alt{margin-top:2.8rem;color:var(--c-text-muted);font-size:.95rem}
-.alt a{color:var(--c-text-secondary);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--c-border-strong)}
-.alt a:hover{color:var(--c-accent);text-decoration-color:var(--c-accent)}
+/* options */
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);border-top:1px solid var(--line)}
+.opt{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px;padding:.85rem 0;border-bottom:1px solid var(--line);cursor:pointer;font-family:'Fraunces',serif;font-size:clamp(1.15rem,1.6vw,1.45rem);color:var(--text2);transition:color .25s}
+.opt:hover{color:var(--text)}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.opt .t{transition:transform .4s var(--ease),color .25s}
+.opt i{flex:none;width:18px;height:18px;border:1px solid var(--line2);border-radius:50%;position:relative;transition:border-color .25s}
+.opt i::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .35s var(--ease)}
+.opt input:checked~.t{color:var(--accent);transform:translateX(8px)}
+.opt input:checked~i{border-color:var(--accent)}
+.opt input:checked~i::after{transform:scale(1)}
+.opt input:focus-visible~i{outline:2px solid var(--accent);outline-offset:4px}
+.field[hidden]{display:none}
 
-.done{display:none;padding:2rem 0}
-.done.show{display:block}
-.done .letter-open{font-size:clamp(1.7rem,2.2vw+1rem,2.3rem)}
-.done p{margin-top:1.4rem;color:var(--c-text-secondary);font-size:1.1rem;line-height:1.7}
-.done a{color:var(--c-accent);display:inline-block;margin-top:1.6rem}
+/* send */
+.send{padding:clamp(3rem,7vw,5rem) 0}
+.send-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.send-col{grid-column:4/12}
+.send p.lead{font-family:'Fraunces',serif;font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.3;color:var(--text2);margin:0 0 2rem;max-width:30ch}
+.btn-send,.btn-next{display:inline-flex;align-items:center;justify-content:center;gap:1rem;min-height:64px;padding:0 2.4rem;border:0;border-radius:2px;background:var(--text);color:var(--bg);font:600 1rem 'Inter',sans-serif;cursor:pointer;transition:background .3s,gap .4s var(--ease),opacity .2s}
+.btn-send:hover,.btn-next:hover{background:var(--accent);gap:1.5rem}
+.btn-send:disabled{opacity:.55;cursor:wait}
+.btn-back{background:none;border:0;color:var(--muted);font:500 .95rem 'Inter',sans-serif;min-height:48px;padding:0 1rem;cursor:pointer}
+.btn-back:hover{color:var(--text)}
+.send-err{margin-top:1.75rem;padding-left:1rem;border-left:2px solid var(--err);color:var(--text2);line-height:1.7;max-width:52ch;animation:errin .4s var(--ease)}
+.send-err[hidden]{display:none}
+.send-err strong{display:block;color:var(--text);font-weight:500}
+.contact a.u{color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line2);transition:color .2s,text-decoration-color .2s}
+.contact a.u:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.stepnav{display:none;gap:.5rem;align-items:center;padding:1.5rem 0 3rem}
 
-@media(prefers-reduced-motion:reduce){.ink{opacity:1!important;animation:none!important}}
+/* done */
+.done{padding:clamp(5rem,14vh,9rem) 0 clamp(4rem,10vh,7rem);min-height:60svh}
+.done h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.6rem,7vw,6.5rem);line-height:1;letter-spacing:-.03em;margin:1.5rem 0 0;outline:none}
+.done h2 em{font-style:italic;color:var(--accent)}
+.done p{max-width:48ch;margin:2rem 0 2.5rem;font-size:1.15rem;line-height:1.7;color:var(--text2)}
+.done-line{height:1px;background:var(--accent);transform-origin:left;animation:grow 1.4s var(--ease) both;max-width:12rem}
+@keyframes grow{from{transform:scaleX(0)}}
+.done-actions{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center}
+.link-btn{background:none;border:0;padding:.5rem 0;font:500 .78rem 'Inter',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--text);cursor:pointer;text-decoration:none;border-bottom:1px solid var(--line2);transition:color .2s,border-color .2s}
+.link-btn:hover{color:var(--accent);border-color:var(--accent)}
+.done[hidden]{display:none}
+
+/* direct / next / cta */
+.block{padding:clamp(4rem,10vw,8rem) 0;border-top:1px solid var(--line)}
+.block h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;letter-spacing:-.02em;margin:1rem 0 0}
+.block .head{grid-column:1/4}
+.block .main{grid-column:4/13}
+.direct a{display:grid;grid-template-columns:8rem 1fr auto;align-items:baseline;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--line);color:var(--text);text-decoration:none}
+.direct a:first-child{border-top:1px solid var(--line)}
+.direct .v{font-family:'Fraunces',serif;font-size:clamp(1.3rem,3vw,2.5rem);letter-spacing:-.015em;overflow-wrap:anywhere;transition:transform .5s var(--ease),color .3s}
+.direct .ar{color:var(--muted);transition:transform .5s var(--ease),color .3s}
+.direct a:hover .v{transform:translateX(12px);color:var(--accent)}
+.direct a:hover .ar{transform:translateX(-6px);color:var(--accent)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+.steps li{border-top:1px solid var(--line2);padding-top:1.25rem}
+.steps .n{display:block;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--accent);line-height:1;margin-bottom:1.5rem}
+.steps h3{margin:0 0 .7rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--text)}
+.steps p{margin:0;color:var(--text2);line-height:1.65;font-size:.98rem}
+.finale{padding:clamp(5rem,14vw,11rem) 0;border-top:1px solid var(--line)}
+.finale p{font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.6vw,2.4rem);color:var(--text2);margin:0 0 1rem;letter-spacing:-.01em}
+.cta{display:inline-flex;align-items:center;gap:clamp(1rem,3vw,2.5rem);font-family:'Fraunces',serif;font-size:clamp(3.2rem,13vw,11rem);line-height:1;letter-spacing:-.04em;color:var(--text);text-decoration:none;transition:color .4s,transform .4s var(--ease);will-change:transform}
+.cta em{font-style:italic}
+.cta svg{width:.45em;height:.45em;flex:none;stroke:currentColor;fill:none;stroke-width:1.5;transition:transform .5s var(--ease)}
+.cta:hover{color:var(--accent)}
+.cta:hover svg{transform:translate(8px,-8px)}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.js [data-reveal].in{opacity:1;transform:none}
+
+/* tablet */
+@media(max-width:1023px){
+  .hero h1{grid-column:1/-1}.hero-aside{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:2rem}
+  .step{grid-template-columns:1fr;row-gap:2.25rem}.step-head,.step-body{grid-column:1/-1;position:static}
+  .step-head{display:flex;align-items:baseline;gap:1.25rem}.step-head .num{margin:0;font-size:3rem}
+  .send-col,.block .main,.block .head{grid-column:1/-1}.block .head{margin-bottom:2.5rem}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2.5rem}
+}
+/* mobile */
+@media(max-width:767px){
+  .hero{min-height:auto;padding-top:2.5rem}
+  .opts{grid-template-columns:1fr}
+  .btn-send{width:100%}
+  .direct a{grid-template-columns:1fr auto}.direct .label{grid-column:1/-1}
+  .steps{grid-template-columns:1fr}
+  .scroll-cue{display:none}
+  .is-stepped .step{display:none;padding:2.5rem 0 1rem;border-bottom:0}.is-stepped .step.is-current{display:grid}
+  .is-stepped .send{display:none;padding:1rem 0 3rem}.is-stepped.at-last .send{display:block}
+  .is-stepped .stepnav{display:flex}.is-stepped.at-last .btn-next{display:none}
+  .is-stepped .btn-next{flex:1}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .hero h1 .line>span,.js .fadein,.js [data-reveal],.js .rule-line{animation:none!important;transform:none!important;opacity:1!important;transition:none!important}
+  .js .rule .l1{opacity:0!important}.js .rule .l2{opacity:1!important}
+  .scroll-cue i::after,.err,.send-err,.done-line{animation:none!important}
+  .contact *{transition-duration:.01ms!important}
+}
 </style>
 </head>
 <body>
@@ -70,7 +202,7 @@
       <span class="brand-mark">TAIWO ATLAS<small>Digital Experience Builder</small></span>
     </a>
     <nav class="nav-primary" aria-label="Primary">
-      <a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active">Contact</a>
+      <a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active" aria-current="page">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="/contact.html" class="btn btn-outline is-active" style="padding:.5rem .9rem;">Start a project</a>
@@ -80,71 +212,199 @@
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-top"><span class="brand-mark">TAIWO ATLAS</span><button class="mobile-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
-  <nav class="mobile-menu-links" aria-label="Mobile"><a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active">Contact</a></nav>
+  <nav class="mobile-menu-links" aria-label="Mobile"><a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active" aria-current="page">Contact</a></nav>
 </div>
 
-<main id="main">
-<article class="letter">
-  <div class="letter-date">Lagos, Nigeria — writing to Taiwo Atlas</div>
-  <h1 class="letter-open" id="openline" aria-label="So — you're thinking about building something."></h1>
+<main id="main" class="contact">
 
-  <form id="pi-form" novalidate action="https://formspree.io/f/mwlkobae" method="POST">
-    <input type="hidden" name="_subject" value="New project inquiry — taiwoatlas.dev">
-    <div class="letter-body">
-      <p>My name is <span class="blank" contenteditable="true" data-ph="your name" id="w-name"></span>, and I'm writing about <span class="blank" contenteditable="true" data-ph="a project" id="w-org">an idea</span>.</p>
-    </div>
-
-    <div class="q">
-      <p class="q-ask">What should I call you, and how do I reach you?</p>
-      <input type="text" id="f-name" name="name" placeholder="Full name" required>
-      <input type="email" id="f-email" name="email" placeholder="Email address" style="margin-top:.8rem;" required>
-      <span class="req">I'll need both of these to write back.</span>
-    </div>
-
-    <div class="q">
-      <p class="q-ask">Tell me what already exists — what does it do, who is it for?</p>
-      <textarea id="f-what" name="what" placeholder="The short version is enough." required></textarea>
-      <span class="req">Give me a little context to start from.</span>
-    </div>
-
-    <div class="q">
-      <p class="q-ask">And what needs to change? What's difficult, unclear, or missing right now?</p>
-      <textarea id="f-change" name="change" placeholder="What prompted this." required></textarea>
-      <span class="req">This is the part that matters most.</span>
-    </div>
-
-    <div class="q">
-      <p class="q-ask">If I had to describe this in one line —</p>
-      <div class="letter-body" style="margin-top:0;">
-        <p>This is mostly a <span class="choices" data-group="ptype" id="c-ptype">
-          <span class="choice" data-value="new digital experience">new digital experience</span><span class="choice" data-value="redesign">redesign</span><span class="choice" data-value="platform build">platform build</span><span class="choice" data-value="digital product">digital product</span><span class="choice" data-value="something else entirely">something else entirely</span>
-        </span>, and I'd like it ready <span class="choices" data-group="timeline" id="c-timeline">
-          <span class="choice" data-value="as soon as possible">as soon as possible</span><span class="choice" data-value="within a month or two">within a month or two</span><span class="choice" data-value="in the next few months">in the next few months</span><span class="choice" data-value="whenever it's right">whenever it's right</span>
-        </span>.</p>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap" style="flex:1;display:flex;flex-direction:column">
+    <div class="grid">
+      <p class="label fadein" style="--d:.1s">Start a project</p>
+      <h1 id="hero-title">
+        <span class="line"><span style="--d:.25s">Let’s build something</span></span>
+        <span class="line"><span style="--d:.4s"><em>worth remembering.</em></span></span>
+      </h1>
+      <div class="hero-aside fadein" style="--d:.8s">
+        <p>Whether you’re launching a new digital product, rethinking an existing website, shaping a brand experience, or working through a difficult digital problem — this is where you explain the opportunity.</p>
+        <ul class="meta label">
+          <li>Based in Nigeria</li><li>Working globally</li><li>Select projects / Direct collaboration</li>
+        </ul>
       </div>
-      <input type="hidden" id="f-ptype" name="project_type">
-      <input type="hidden" id="f-timeline" name="timeline">
+      <div class="scroll-cue fadein" style="--d:1.2s"><i aria-hidden="true"></i><span class="label">Scroll</span></div>
     </div>
+  </div>
+</section>
 
-    <div class="q">
-      <p class="q-ask">When this is done, what should be different?</p>
-      <textarea id="f-success" name="success" placeholder="What success looks like, in your words."></textarea>
-    </div>
-
-    <div class="sign">
-      <p>Looking forward to hearing from you.</p>
-      <button type="submit" class="sendbtn" id="sendbtn">Send this letter</button>
-    </div>
-  </form>
-
-  <div class="done" id="done">
-    <h2 class="letter-open">Got it — <em>thank you.</em></h2>
-    <p>I'll read this properly and write back within one business day. If it's urgent, reach me directly below.</p>
-    <a href="/index.html">← Back to the studio</a>
+<div class="wrap">
+  <div class="rule" data-rule aria-hidden="true">
+    <div class="rule-line"></div>
+    <div class="rule-labels label"><span class="l1">Introduction</span><span class="l2">The project</span></div>
   </div>
 
-  <p class="alt">Would rather just talk? Write to <a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a>, message on <a href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp</a>, or call <a href="tel:+2349011065513">+234 901 106 5513</a>.</p>
-</article>
+  <section id="inquiry" aria-label="Project inquiry">
+    <noscript><p class="hint" style="margin-top:2rem">Some enhancements need JavaScript. You can always write to <a class="u" href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a>.</p></noscript>
+    <form id="pi-form" novalidate action="https://formspree.io/f/mwlkobae" method="POST" aria-describedby="form-note">
+      <p id="form-note" class="sr-only">Fields marked optional can be skipped. Name, email, project type and a project description are required.</p>
+      <input type="hidden" name="_subject" value="New project inquiry — taiwoatlas.dev">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+      <div class="progress label" id="progress" aria-hidden="true"><span class="p-count">01 / 06</span><span class="p-bar"><i></i></span><span class="p-name">About you</span></div>
+
+      <section class="step" data-name="About you">
+        <div class="step-head"><span class="num">01</span><span class="label">About you</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 1 of 6: About you</legend>
+          <div class="field" data-field="name">
+            <label class="q" for="f-name">What’s your name?</label>
+            <input class="in" type="text" id="f-name" name="name" placeholder="Full name" autocomplete="name" required aria-describedby="err-name">
+            <p class="err" id="err-name" aria-live="polite"></p>
+          </div>
+          <div class="field" data-field="email">
+            <label class="q" for="f-email">What’s the best email to reach you?</label>
+            <input class="in" type="email" id="f-email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" required aria-describedby="err-email">
+            <p class="err" id="err-email" aria-live="polite"></p>
+          </div>
+          <div class="field" data-field="company">
+            <label class="q" for="f-company">Company or organisation <small>Optional</small></label>
+            <input class="in" type="text" id="f-company" name="company" placeholder="Where you work, if relevant" autocomplete="organization">
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="step" data-name="The project">
+        <div class="step-head"><span class="num">02</span><span class="label">The project</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 2 of 6: The project</legend>
+          <fieldset class="field" data-field="project_type">
+            <legend class="q">What are we building?</legend>
+            <div class="opts" id="opts-project_type" data-group="project_type" data-required></div>
+            <p class="err" id="err-project_type" aria-live="polite"></p>
+          </fieldset>
+          <div class="field" data-field="project_description">
+            <label class="q" for="f-desc">Tell me about what you’re building.</label>
+            <textarea class="in" data-grow id="f-desc" name="project_description" rows="3" maxlength="4000" placeholder="Give me the short version — what exists, what you’re trying to create, and who it’s for." required aria-describedby="err-project_description"></textarea>
+            <p class="err" id="err-project_description" aria-live="polite"></p>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="step" data-name="The opportunity">
+        <div class="step-head"><span class="num">03</span><span class="label">The opportunity</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 3 of 6: The opportunity</legend>
+          <div class="field" data-field="problem">
+            <label class="q" for="f-problem">What needs to change? <small>Optional</small></label>
+            <span class="hint" id="h-problem">What isn’t working, what feels missing, or what opportunity are you trying to unlock?</span>
+            <textarea class="in" data-grow id="f-problem" name="problem" rows="3" maxlength="4000" placeholder="What prompted this." aria-describedby="h-problem"></textarea>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="step" data-name="Scope & timing">
+        <div class="step-head"><span class="num">04</span><span class="label">Scope &amp; timing</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 4 of 6: Scope and timing</legend>
+          <fieldset class="field" data-field="investment">
+            <legend class="q">Where are you thinking of investing? <small>Optional</small></legend>
+            <span class="hint">A rough range helps me suggest the right approach. It doesn’t decide whether we work together.</span>
+            <div class="opts" data-group="investment"></div>
+          </fieldset>
+          <fieldset class="field" data-field="timeline">
+            <legend class="q">When would you like to begin? <small>Optional</small></legend>
+            <div class="opts" data-group="timeline"></div>
+          </fieldset>
+          <div class="field" data-field="launch_date">
+            <label class="q" for="f-date">Is there a fixed launch date? <small>Optional</small></label>
+            <span class="hint" id="h-date">Leave this empty if there isn’t one.</span>
+            <input class="in" type="date" id="f-date" name="launch_date" aria-describedby="h-date" style="max-width:20rem">
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="step" data-name="Your goal">
+        <div class="step-head"><span class="num">05</span><span class="label">Your goal</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 5 of 6: Your goal</legend>
+          <div class="field" data-field="success">
+            <label class="q" for="f-success">What should be different when we’re done? <small>Optional</small></label>
+            <span class="hint" id="h-success">Describe the outcome that would make this project successful.</span>
+            <textarea class="in" data-grow id="f-success" name="success" rows="3" maxlength="4000" placeholder="Success, in your words." aria-describedby="h-success"></textarea>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="step" data-name="Contact">
+        <div class="step-head"><span class="num">06</span><span class="label">Contact</span></div>
+        <fieldset class="step-body">
+          <legend class="sr-only">Step 6 of 6: Contact preference</legend>
+          <fieldset class="field" data-field="contact_preference">
+            <legend class="q">How would you like me to reply? <small>Optional</small></legend>
+            <div class="opts" data-group="contact_preference"></div>
+          </fieldset>
+          <div class="field" data-field="phone" id="phone-field" hidden>
+            <label class="q" for="f-phone">Best number to reach you <small>Optional</small></label>
+            <input class="in" type="tel" id="f-phone" name="phone" placeholder="Include country code" autocomplete="tel" inputmode="tel" style="max-width:26rem">
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="wrap-stepnav stepnav" id="stepnav">
+        <button type="button" class="btn-back" id="btn-back">Back</button>
+        <button type="button" class="btn-next" id="btn-next">Continue <span aria-hidden="true">→</span></button>
+      </div>
+
+      <div class="send" id="send">
+        <div class="send-in"><div class="send-col">
+          <p class="lead">That’s everything I need to start. I’ll read it carefully.</p>
+          <button type="submit" class="btn-send" id="sendbtn"><span class="lbl">Send project inquiry</span><span aria-hidden="true">→</span></button>
+          <div class="send-err" id="send-err" role="alert" hidden>
+            <strong>Something went wrong while sending this.</strong>
+            Please try again, or contact me directly — <a class="u" href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a> or <a class="u" href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>. Everything you wrote is still here.
+          </div>
+        </div></div>
+      </div>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <div class="done-line" aria-hidden="true"></div>
+      <h2 id="done-title" tabindex="-1">Thank you. <em>I’ve got it.</em></h2>
+      <p>I’ll read through the project carefully and get back to you within one business day. If it’s urgent, you can reach me directly below.</p>
+      <div class="done-actions">
+        <a class="link-btn" href="/index.html">Back to the studio →</a>
+        <button type="button" class="link-btn" id="again">Send another inquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="direct-h">
+    <div class="grid">
+      <div class="head" data-reveal><p class="label">Prefer a direct conversation?</p><h2 id="direct-h">Talk to me directly.</h2></div>
+      <div class="main direct" data-reveal style="--d:.1s">
+        <a href="mailto:taiwoatlas.dev@gmail.com"><span class="label">Email</span><span class="v">taiwoatlas.dev@gmail.com</span><span class="ar" aria-hidden="true">→</span></a>
+        <a href="https://wa.me/2349011065513" target="_blank" rel="noopener"><span class="label">WhatsApp</span><span class="v">+234 901 106 5513<span class="sr-only"> (opens in a new tab)</span></span><span class="ar" aria-hidden="true">↗</span></a>
+        <a href="tel:+2349011065513"><span class="label">Phone</span><span class="v">+234 901 106 5513</span><span class="ar" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="next-h">
+    <div class="grid" style="row-gap:3rem">
+      <div class="head" data-reveal><p class="label">What happens next</p><h2 id="next-h">A deliberate start.</h2></div>
+      <ol class="main steps" style="list-style:none">
+        <li data-reveal style="--d:.05s"><span class="n">01</span><h3>You send the brief</h3><p>Tell me what you’re building and what needs to change.</p></li>
+        <li data-reveal style="--d:.15s"><span class="n">02</span><h3>We talk</h3><p>I read it carefully, then reply to arrange a conversation.</p></li>
+        <li data-reveal style="--d:.25s"><span class="n">03</span><h3>We define the direction</h3><p>Scope, approach and timing, agreed before any build begins.</p></li>
+        <li data-reveal style="--d:.35s"><span class="n">04</span><h3>We build</h3><p>Design and engineering move together, with you involved where it matters.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="finale" aria-labelledby="cta-h" data-reveal>
+    <p id="cta-h">Have something ambitious in mind?</p>
+    <a class="cta" id="cta" href="mailto:taiwoatlas.dev@gmail.com"><span><em>Let’s talk.</em></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19L19 5M8 5h11v11"/></svg></a>
+  </section>
+</div>
 </main>
 
 <footer class="site-footer">
@@ -159,66 +419,226 @@
 <script src="/js/app.js"></script>
 <script>
 (function(){
-  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var line = "So — you're thinking about building something.";
-  var el = document.getElementById('openline');
-  if(reduced){ el.textContent = line; }
-  else{
-    var lastWordStart = line.lastIndexOf('something.');
-    line.split('').forEach(function(ch,i){
-      var s = document.createElement('span'); s.className='ink';
-      s.style.animationDelay = (i*14)+'ms';
-      if(i >= lastWordStart) s.style.fontStyle = 'italic';
-      s.textContent = ch === ' ' ? '\u00A0' : ch;
-      el.appendChild(s);
-    });
+'use strict';
+var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var form = document.getElementById('pi-form');
+if(!form) return;
+
+/* Configurable option data — edit here only */
+var projectTypes = ['New digital experience','Website redesign','Digital product','Web application','E-commerce experience','Brand / digital identity','Something else'];
+var budgets = ['Under $5,000','$5,000 — $10,000','$10,000 — $25,000','$25,000 — $50,000','$50,000+','Let\u2019s discuss'];
+var timelines = ['As soon as possible','Within 1–2 months','Within the next few months','I\u2019m exploring','I\u2019m flexible'];
+var contactPrefs = ['Email','Phone','WhatsApp'];
+
+var messages = {
+  name:'Please enter your name.',
+  email:'Please enter your email so I can reply.',
+  emailBad:'That email doesn\u2019t look right — check for typos.',
+  project_type:'Choose the option closest to what you\u2019re building.',
+  project_description:'Add a short description so I have somewhere to start.'
+};
+var rules = {
+  name:function(v){return v?'':messages.name},
+  email:function(v){return !v?messages.email:(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?'':messages.emailBad)},
+  project_type:function(v){return v?'':messages.project_type},
+  project_description:function(v){return v?'':messages.project_description}
+};
+var steps = [].slice.call(form.querySelectorAll('.step'));
+var current = 0, stepped = false;
+
+function renderOptions(group, items, required){
+  var box = form.querySelector('[data-group="'+group+'"]');
+  if(!box) return;
+  box.innerHTML = '';
+  items.forEach(function(label, i){
+    var l = document.createElement('label'); l.className = 'opt';
+    var inp = document.createElement('input');
+    inp.type = 'radio'; inp.name = group; inp.value = label; inp.id = group+'-'+i;
+    if(required){ inp.required = true; inp.setAttribute('aria-describedby','err-'+group); }
+    var t = document.createElement('span'); t.className = 't'; t.textContent = label;
+    var dot = document.createElement('i'); dot.setAttribute('aria-hidden','true');
+    l.appendChild(inp); l.appendChild(t); l.appendChild(dot);
+    box.appendChild(l);
+  });
+}
+function initProjectType(){ renderOptions('project_type', projectTypes, true); }
+function initBudget(){ renderOptions('investment', budgets); }
+function initTimeline(){ renderOptions('timeline', timelines); }
+function initContactPref(){
+  renderOptions('contact_preference', contactPrefs);
+  var phone = document.getElementById('phone-field');
+  form.addEventListener('change', function(e){
+    if(e.target.name !== 'contact_preference') return;
+    phone.hidden = !(e.target.value === 'Phone' || e.target.value === 'WhatsApp');
+  });
+}
+/* Radio groups are clearable: click a checked option again to deselect optional groups */
+function initDeselect(){
+  form.addEventListener('click', function(e){
+    var inp = e.target; if(!inp || inp.type !== 'radio' || inp.name === 'project_type') return;
+    if(inp.dataset.was === '1'){ inp.checked = false; inp.dataset.was = ''; inp.dispatchEvent(new Event('change',{bubbles:true})); }
+    else{
+      form.querySelectorAll('input[name="'+inp.name+'"]').forEach(function(r){ r.dataset.was = ''; });
+      inp.dataset.was = '1';
+    }
+  });
+}
+
+function fieldEl(name){ return form.querySelector('[data-field="'+name+'"]'); }
+function getValue(name){ var c = form.elements[name]; return c ? String(c.value || '').trim() : ''; }
+function firstControl(name){ var f = fieldEl(name); return f && f.querySelector('input,textarea'); }
+function setError(name, msg){
+  var f = fieldEl(name), e = document.getElementById('err-'+name); if(!f||!e) return;
+  e.textContent = msg; f.classList.toggle('has-err', !!msg);
+  f.querySelectorAll('input,textarea').forEach(function(c){ if(c.type==='radio') return; msg ? c.setAttribute('aria-invalid','true') : c.removeAttribute('aria-invalid'); });
+}
+function validateField(name){ var msg = rules[name](getValue(name)); setError(name, msg); return !msg; }
+function initValidation(){
+  form.noValidate = true;
+  form.addEventListener('blur', function(e){ var n = e.target.name; if(rules[n] && e.target.type!=='radio' && (e.target.value.trim()||fieldEl(n).classList.contains('has-err'))) validateField(n); }, true);
+  form.addEventListener('input', function(e){ var n = e.target.name; if(rules[n] && fieldEl(n).classList.contains('has-err')) validateField(n); });
+  form.addEventListener('change', function(e){ var n = e.target.name; if(rules[n]) validateField(n); });
+}
+function validateNames(names){
+  var firstBad = null;
+  names.forEach(function(n){ if(!validateField(n) && !firstBad) firstBad = firstControl(n); });
+  return firstBad;
+}
+function validateAll(){ return validateNames(Object.keys(rules)); }
+function stepNames(i){
+  return Object.keys(rules).filter(function(n){ return steps[i].contains(fieldEl(n)); });
+}
+
+function initForm(){
+  document.querySelectorAll('textarea[data-grow]').forEach(function(t){
+    function grow(){ t.style.height='auto'; var h=Math.min(t.scrollHeight+2, 480); t.style.height=h+'px'; t.style.overflowY = t.scrollHeight>482?'auto':'hidden'; }
+    t.addEventListener('input', grow); grow();
+  });
+  var d = document.getElementById('f-date');
+  if(d){ d.min = new Date().toISOString().slice(0,10); }
+  form.addEventListener('submit', handleSubmit);
+  document.getElementById('again').addEventListener('click', function(){
+    form.reset(); form.hidden = false; document.getElementById('done').hidden = true;
+    document.getElementById('phone-field').hidden = true;
+    form.querySelectorAll('textarea[data-grow]').forEach(function(t){ t.style.height=''; });
+    if(stepped) showStep(0); 
+    document.getElementById('inquiry').scrollIntoView({behavior:reduced?'auto':'smooth'});
+  });
+}
+
+function collect(){
+  var fd = new FormData();
+  new FormData(form).forEach(function(v,k){
+    if(typeof v === 'string'){ v = v.trim(); if(!v) return; }
+    fd.append(k, v);
+  });
+  return fd;
+}
+function setBusy(b){
+  var btn = document.getElementById('sendbtn');
+  btn.disabled = b; btn.setAttribute('aria-busy', b);
+  btn.querySelector('.lbl').textContent = b ? 'Sending…' : 'Send project inquiry';
+}
+function scrollTo(el){ el.scrollIntoView({block:'center', behavior:reduced?'auto':'smooth'}); }
+function goToInvalid(el){
+  var s = steps.indexOf(el.closest('.step'));
+  if(stepped && s > -1) showStep(s, true);
+  el.focus({preventScroll:true}); scrollTo(el);
+}
+function handleSubmit(e){
+  e.preventDefault();
+  var bad = validateAll();
+  if(bad){ goToInvalid(bad); return; }
+  var err = document.getElementById('send-err'); err.hidden = true;
+  setBusy(true);
+  fetch(form.action, {method:'POST', body:collect(), headers:{'Accept':'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); showSuccess(); })
+    .catch(function(){ err.hidden = false; })
+    .then(function(){ setBusy(false); });
+}
+function showSuccess(){
+  form.hidden = true;
+  var done = document.getElementById('done'); done.hidden = false;
+  var h = document.getElementById('done-title');
+  h.focus({preventScroll:true}); done.scrollIntoView({block:'start', behavior:reduced?'auto':'smooth'});
+}
+
+/* progress + stepped (mobile) mode */
+function updateProgress(i){
+  var p = document.getElementById('progress'); if(!p) return;
+  current = i;
+  p.querySelector('.p-count').textContent = '0'+(i+1)+' / 0'+steps.length;
+  p.querySelector('.p-name').textContent = steps[i].dataset.name;
+  p.querySelector('.p-bar i').style.transform = 'scaleX('+((i+1)/steps.length)+')';
+}
+function initProgress(){
+  var h = document.querySelector('[data-header]');
+  if(h){ var pos = getComputedStyle(h).position; if(pos==='fixed'||pos==='sticky') document.documentElement.style.setProperty('--header-h', h.offsetHeight+'px'); }
+  updateProgress(0);
+  if(!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    if(stepped) return;
+    entries.forEach(function(en){ if(en.isIntersecting) updateProgress(steps.indexOf(en.target)); });
+  }, {rootMargin:'-35% 0px -55% 0px'});
+  steps.forEach(function(s){ io.observe(s); });
+}
+function showStep(i, keepFocus){
+  current = Math.max(0, Math.min(steps.length-1, i));
+  steps.forEach(function(s,n){ s.classList.toggle('is-current', n===current); });
+  form.classList.toggle('at-last', current === steps.length-1);
+  document.getElementById('btn-back').style.visibility = current ? 'visible' : 'hidden';
+  updateProgress(current);
+  if(!keepFocus){
+    document.getElementById('progress').scrollIntoView({behavior:reduced?'auto':'smooth', block:'start'});
+    var c = steps[current].querySelector('input:not([type=radio]):not([type=hidden]),textarea');
+    if(c) c.focus({preventScroll:true});
   }
-
-  function syncBlank(id, target){
-    var b = document.getElementById(id);
-    b.addEventListener('input', function(){ document.getElementById(target).value = b.textContent.trim(); });
+}
+function initMobileBehavior(){
+  var mq = matchMedia('(max-width:767px)');
+  function apply(){
+    stepped = mq.matches;
+    form.classList.toggle('is-stepped', stepped);
+    if(stepped) showStep(current, true);
+    else{ steps.forEach(function(s){ s.classList.remove('is-current'); }); form.classList.remove('at-last'); }
   }
-  // mirror contenteditable blanks into hidden-ish tracked values (also used as name/org fallback)
-  document.getElementById('w-name').addEventListener('input', function(){
-    document.getElementById('f-name').value = this.textContent.trim() || document.getElementById('f-name').value;
+  document.getElementById('btn-next').addEventListener('click', function(){
+    var bad = validateNames(stepNames(current));
+    if(bad){ bad.focus({preventScroll:true}); scrollTo(bad); return; }
+    showStep(current+1);
   });
-  document.getElementById('f-name').addEventListener('input', function(){
-    document.getElementById('w-name').textContent = this.value;
-  });
+  document.getElementById('btn-back').addEventListener('click', function(){ showStep(current-1); });
+  (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
+  apply();
+}
 
-  document.querySelectorAll('.choices').forEach(function(group){
-    var hidden = document.getElementById('f-' + group.dataset.group);
-    group.querySelectorAll('.choice').forEach(function(c){
-      c.addEventListener('click', function(){
-        group.querySelectorAll('.choice').forEach(function(x){ x.classList.remove('sel'); });
-        c.classList.add('sel');
-        hidden.value = c.dataset.value;
-      });
+function initAnimations(){
+  var rule = document.querySelector('[data-rule]');
+  var items = [].slice.call(document.querySelectorAll('[data-reveal]'));
+  if(!('IntersectionObserver' in window) || reduced){
+    items.forEach(function(el){ el.classList.add('in'); }); if(rule) rule.classList.add('in'); return;
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:.1});
+  items.forEach(function(el){ io.observe(el); });
+  if(rule){
+    var rio = new IntersectionObserver(function(es){ if(es[0].isIntersecting){ rule.classList.add('in'); rio.disconnect(); } }, {rootMargin:'0px 0px -25% 0px'});
+    rio.observe(rule);
+  }
+  /* magnetic CTA — desktop pointers only */
+  var cta = document.getElementById('cta');
+  if(cta && matchMedia('(hover:hover) and (pointer:fine)').matches){
+    cta.addEventListener('pointermove', function(e){
+      var r = cta.getBoundingClientRect();
+      cta.style.transform = 'translate('+((e.clientX-r.left-r.width/2)*.06).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.1).toFixed(1)+'px)';
     });
-  });
+    cta.addEventListener('pointerleave', function(){ cta.style.transform = ''; });
+  }
+}
 
-  var form = document.getElementById('pi-form');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    document.querySelectorAll('.q.has-err').forEach(function(q){ q.classList.remove('has-err'); });
-    var ok = true;
-    [['f-name',''],['f-email',''],['f-what',''],['f-change','']].forEach(function(pair){
-      var el = document.getElementById(pair[0]);
-      if(!el.value.trim()){ el.closest('.q').classList.add('has-err'); ok = false; }
-    });
-    var emailEl = document.getElementById('f-email');
-    if(emailEl.value.trim() && !/\S+@\S+\.\S+/.test(emailEl.value)){ emailEl.closest('.q').classList.add('has-err'); ok = false; }
-    if(!ok) return;
-    var btn = document.getElementById('sendbtn');
-    btn.disabled = true; btn.textContent = 'Sending…';
-    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
-      .then(function(){
-        document.querySelector('.letter-body').style.display='none';
-        document.querySelectorAll('.q,.sign,.alt').forEach(function(x){x.style.display='none';});
-        document.getElementById('done').classList.add('show');
-      })
-      .catch(function(){ form.submit(); });
-  });
+initProjectType(); initBudget(); initTimeline(); initContactPref(); initDeselect();
+initForm(); initValidation(); initProgress(); initMobileBehavior(); initAnimations();
 })();
 </script>
 </body>
