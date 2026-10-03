@@ -3,19 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Taiwo Atlas</title>
-<meta name="description" content="Start a project with Taiwo Atlas — a guided project-intake form for describing the actual problem, not just selecting a service.">
+<title>Start a Project — Taiwo Atlas</title>
+<meta name="description" content="Start a project with Taiwo Atlas — the first conversation starts with the problem, not a service menu.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0a0e16">
 <link rel="canonical" href="https://taiwoatlas.dev/contact.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact — Taiwo Atlas">
-<meta property="og:description" content="Start a project with Taiwo Atlas — a guided project-intake form for describing the actual problem, not just selecting a service.">
+<meta property="og:title" content="Start a Project — Taiwo Atlas">
+<meta property="og:description" content="Build something worth returning to. Tell me what is changing, what is not working, or what needs to exist.">
 <meta property="og:image" content="/assets/logo/taiwo-atlas-logo.png">
 <meta property="og:url" content="https://taiwoatlas.dev/contact.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact — Taiwo Atlas">
-<meta name="twitter:description" content="Start a project with Taiwo Atlas — a guided project-intake form for describing the actual problem, not just selecting a service.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/logo/taiwo-atlas-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +23,97 @@
 <link rel="stylesheet" href="/css/base.css">
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/pages.css">
+<style>
+.pi{--pi-line:var(--c-border);--pi-accent:var(--c-accent);}
+.pi-grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;
+  background-image:linear-gradient(var(--pi-line) 1px,transparent 1px),linear-gradient(90deg,var(--pi-line) 1px,transparent 1px);
+  background-size:64px 64px;}
+.pi-section{position:relative;z-index:1;}
+.pi-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-text-muted);}
+.pi-hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:var(--sp-6) 0 var(--sp-5);}
+.pi-hero-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--sp-5);}
+.pi-hero h1{font-family:var(--font-display);font-size:var(--f-display);line-height:.98;font-weight:500;margin:0;max-width:16ch;}
+.pi-hero h1 span{display:block;opacity:0;transform:translateY(.4em);animation:piline .9s cubic-bezier(.2,.7,.2,1) forwards;}
+.pi-hero h1 span:nth-child(2){animation-delay:.12s}
+.pi-hero h1 span:nth-child(3){animation-delay:.24s;color:var(--pi-accent);}
+@keyframes piline{to{opacity:1;transform:translateY(0)}}
+.pi-hero-sub{max-width:46ch;color:var(--c-text-secondary);margin-top:var(--sp-5);font-size:1.1rem;opacity:0;animation:pifade .8s ease .5s forwards;}
+@keyframes pifade{to{opacity:1}}
+.pi-rule{height:1px;background:var(--pi-line);width:0;margin-top:var(--sp-6);animation:piwidth 1.1s cubic-bezier(.2,.7,.2,1) .7s forwards;}
+@keyframes piwidth{to{width:100%}}
+.pi-scroll{display:flex;align-items:center;gap:.5rem;margin-top:var(--sp-4);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:var(--c-text-muted);opacity:0;animation:pifade .8s ease .9s forwards;}
+.pi-scroll svg{animation:pibounce 1.8s ease-in-out infinite;}
+@keyframes pibounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.pi-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--sp-6);align-items:start;}
+.pi-panel{position:sticky;top:6rem;}
+.pi-panel .pi-name{font-family:var(--font-display);font-size:2.2rem;margin:0 0 var(--sp-4);}
+.pi-meta{font-family:var(--font-mono);font-size:.78rem;color:var(--c-text-muted);letter-spacing:.08em;margin-bottom:var(--sp-5);}
+.pi-link-row{display:block;padding:var(--sp-3) 0;border-top:1px solid var(--pi-line);position:relative;text-decoration:none;color:var(--c-text);}
+.pi-link-row:last-child{border-bottom:1px solid var(--pi-line);}
+.pi-link-row .k{display:block;font-size:.7rem;font-family:var(--font-mono);color:var(--c-text-muted);text-transform:uppercase;letter-spacing:.1em;}
+.pi-link-row .v{display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;margin-top:.2rem;}
+.pi-link-row .reveal{font-family:var(--font-mono);font-size:.72rem;color:var(--pi-accent);opacity:0;transform:translateX(-6px);transition:all .25s ease;}
+.pi-link-row:hover .reveal{opacity:1;transform:translateX(0);}
+.pi-link-row:hover .v{color:var(--pi-accent);}
+.pi-field{position:relative;margin-bottom:var(--sp-6);padding-bottom:var(--sp-2);}
+.pi-field .num{font-family:var(--font-mono);font-size:.75rem;color:var(--c-text-muted);}
+.pi-field label{display:block;font-size:.95rem;font-weight:600;margin-top:.3rem;}
+.pi-field .hint{font-size:.85rem;color:var(--c-text-muted);margin-top:.2rem;}
+.pi-field input[type=text],.pi-field input[type=email],.pi-field input[type=url],.pi-field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--pi-line);color:var(--c-text);
+  font-size:1.1rem;padding:.6rem .1rem;outline:none;font-family:var(--font-sans);resize:vertical;transition:border-color .2s;}
+.pi-field textarea{min-height:4.5rem;}
+.pi-field input:focus,.pi-field textarea:focus{border-color:var(--pi-accent);}
+.pi-field .err{display:none;color:var(--c-error);font-size:.8rem;margin-top:.3rem;}
+.pi-field.has-err .err{display:block;}
+.pi-field.has-err input,.pi-field.has-err textarea{border-color:var(--c-error);}
+.pi-list{border-top:1px solid var(--pi-line);}
+.pi-list .opt{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) .2rem;border-bottom:1px solid var(--pi-line);cursor:pointer;transition:padding .2s;}
+.pi-list .opt:hover{padding-left:.6rem;}
+.pi-list .opt .n{font-family:var(--font-mono);font-size:.75rem;color:var(--c-text-muted);width:2rem;flex-shrink:0;}
+.pi-list .opt .t{font-weight:600;}
+.pi-list .opt .d{font-size:.82rem;color:var(--c-text-muted);display:block;}
+.pi-list .opt .arr{margin-left:auto;opacity:0;transition:opacity .2s;color:var(--pi-accent);}
+.pi-list .opt:hover .arr{opacity:1;}
+.pi-list .opt.sel{color:var(--pi-accent);}
+.pi-list .opt.sel .n{color:var(--pi-accent);}
+.pi-list .opt.sel .arr{opacity:1;}
+.pi-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem;}
+.pi-pills .pill{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.04em;padding:.5rem .9rem;border:1px solid var(--pi-line);border-radius:999px;cursor:pointer;color:var(--c-text-secondary);transition:all .2s;}
+.pi-pills .pill:hover{border-color:var(--pi-accent);color:var(--c-text);}
+.pi-pills .pill.sel{background:var(--pi-accent);border-color:var(--pi-accent);color:var(--c-inverse);}
+.pi-submit{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.9rem;letter-spacing:.06em;padding:1.1rem 1.8rem;background:var(--c-text);color:var(--c-inverse);border:0;border-radius:2px;cursor:pointer;transition:transform .2s,gap .2s;margin-top:var(--sp-5);}
+.pi-submit:hover{transform:translateX(2px);gap:.9rem;}
+.pi-submit:disabled{opacity:.5;cursor:default;}
+.pi-success{display:none;padding:var(--sp-6) 0;}
+.pi-success.show{display:block;}
+.pi-success h3{font-family:var(--font-display);font-size:2rem;margin-bottom:var(--sp-3);}
+.pi-success a{display:inline-block;margin-top:var(--sp-4);color:var(--pi-accent);font-family:var(--font-mono);font-size:.85rem;}
+.pi-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+.pi-reveal.in{opacity:1;transform:translateY(0);}
+.pi-process{display:grid;gap:var(--sp-6);position:relative;}
+.pi-process::before{content:"";position:absolute;left:1.1rem;top:0;bottom:0;width:1px;background:var(--pi-line);}
+.pi-process-line{position:absolute;left:1.1rem;top:0;width:1px;background:var(--pi-accent);height:0;transition:height .3s ease;}
+.pi-stage{display:flex;gap:var(--sp-4);position:relative;padding-left:2.4rem;}
+.pi-stage .n{position:absolute;left:0;font-family:var(--font-mono);font-size:.9rem;color:var(--c-text-muted);background:var(--c-canvas);width:2.2rem;}
+.pi-stage h4{font-family:var(--font-display);font-size:1.3rem;margin:0 0 .3rem;}
+.pi-stage p{color:var(--c-text-secondary);margin:0;max-width:40ch;}
+.pi-question{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;}
+.pi-question h2{font-family:var(--font-display);font-size:clamp(2rem,4vw+1rem,4rem);line-height:1.15;max-width:18ch;}
+.pi-question span{display:inline;opacity:.15;transition:opacity .6s ease;}
+.pi-question span.in{opacity:1;}
+.pi-index{position:fixed;right:var(--sp-5);top:50%;transform:translateY(-50%);z-index:5;font-family:var(--font-mono);font-size:.72rem;color:var(--c-text-muted);}
+.pi-index .t{letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;opacity:.7;}
+.pi-index div[data-idx]{padding:.25rem 0;transition:color .2s;}
+.pi-index div[data-idx].active{color:var(--pi-accent);}
+@media (max-width:1100px){.pi-index{display:none;}.pi-layout{grid-template-columns:1fr;}.pi-panel{position:static;}}
+@media (prefers-reduced-motion:reduce){
+  .pi-hero h1 span,.pi-hero-sub,.pi-rule,.pi-scroll{animation:none!important;opacity:1!important;transform:none!important;width:100%!important;}
+  .pi-reveal{opacity:1!important;transform:none!important;}
+  .pi-scroll svg{animation:none!important;}
+}
+</style>
 </head>
-
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header>
@@ -48,14 +135,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         Search <kbd>&#8984;K</kbd>
       </button>
-      <a href="/contact.html" class="btn btn-outline" style="padding:.5rem .9rem;">Start a project</a>
+      <a href="/contact.html" class="btn btn-outline is-active" style="padding:.5rem .9rem;" aria-current="page">Start a project</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
       </button>
     </div>
   </div>
 </header>
-
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-top">
     <span class="brand-mark"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="30" height="30" style="display:inline-block;vertical-align:middle;margin-right:.5rem;border-radius:50%;">TAIWO ATLAS</span>
@@ -70,14 +156,12 @@
 <a href="/services.html">Services</a>
 <a href="/journal.html">Journal</a>
 <a href="/contact.html" class="is-active">Contact</a>
-    <a href="/contact.html">Start a project</a>
   </nav>
   <div class="mobile-menu-foot">
     <span><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></span>
     <span><a href="tel:+2349011065513">+234 901 106 5513</a></span>
   </div>
 </div>
-
 <div class="cmdk-overlay" data-cmdk-overlay>
   <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
     <div class="cmdk-input-row">
@@ -88,68 +172,167 @@
     <div class="cmdk-results"></div>
   </div>
 </div>
-
-<main id="main">
-
-<section class="contact-hero container">
-  <span class="eyebrow">Contact</span>
-  <h1 class="h1" style="margin-top:.6rem;">Start a project.</h1>
-  <p class="lede" style="margin-top:var(--sp-4);">Describe the actual problem — the form below is built around that, not a service menu.</p>
+<div class="pi-grid" aria-hidden="true"></div>
+<main id="main" class="pi">
+<div class="pi-index" aria-hidden="true">
+  <div class="t">Project Brief</div>
+  <div data-idx="intro">01 / Intro</div>
+  <div data-idx="brief">02 / Brief</div>
+  <div data-idx="process">03 / Process</div>
+  <div data-idx="direct">04 / Direct</div>
+</div>
+<section class="pi-section pi-hero container" id="intro">
+  <div class="pi-hero-head">
+    <span class="pi-label">TA / Project intake — 01</span>
+    <span class="pi-label">Lagos — Global</span>
+  </div>
+  <h1><span>Build something</span><span>worth returning</span><span>to.</span></h1>
+  <p class="pi-hero-sub">Tell me what is changing, what is not working, or what needs to exist. The first conversation starts with the problem — not a service menu.</p>
+  <div class="pi-rule"></div>
+  <div class="pi-scroll">SCROLL TO BEGIN <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
 </section>
-<section class="section container">
-  <div class="contact-layout">
-    <div>
-      <div class="contact-info-item" style="margin-top:0;">
-        <span class="label-muted">Email</span>
-        <p style="margin-top:.3rem;"><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></p>
-      </div>
-      <div class="contact-info-item">
-        <span class="label-muted">Phone</span>
-        <p style="margin-top:.3rem;"><a href="tel:+2349011065513">+234 901 106 5513</a></p>
-      </div>
-      <div class="contact-info-item">
-        <span class="label-muted">WhatsApp</span>
-        <p style="margin-top:.3rem;"><a href="https://wa.me/2349011065513" target="_blank" rel="noopener">+234 901 106 5513</a></p>
-      </div>
-      <div class="contact-info-item">
-        <span class="label-muted">Location</span>
-        <p style="margin-top:.3rem;">Lagos, Nigeria — working remotely with clients anywhere.</p>
-      </div>
-      <div class="contact-info-item">
-        <span class="label-muted">Response time</span>
-        <p style="margin-top:.3rem;">Within one business day.</p>
+<section class="pi-section container" id="brief" style="padding:var(--sp-6) 0;">
+  <div class="pi-layout">
+    <div class="pi-panel pi-reveal">
+      <span class="pi-label">02 — Contact</span>
+      <h2 class="pi-name" style="margin-top:.5rem;">TAIWO ATLAS</h2>
+      <div class="pi-meta">LAGOS / NIGERIA<br>REMOTE / GLOBAL</div>
+      <a class="pi-link-row" href="mailto:taiwoatlas.dev@gmail.com">
+        <span class="k">Email</span>
+        <span class="v">taiwoatlas.dev@gmail.com <span class="reveal">SEND AN EMAIL →</span></span>
+      </a>
+      <a class="pi-link-row" href="https://wa.me/2349011065513" target="_blank" rel="noopener">
+        <span class="k">WhatsApp</span>
+        <span class="v">+234 901 106 5513 <span class="reveal">START A CONVERSATION →</span></span>
+      </a>
+      <a class="pi-link-row" href="tel:+2349011065513">
+        <span class="k">Phone</span>
+        <span class="v">+234 901 106 5513 <span class="reveal">CALL →</span></span>
+      </a>
+    </div>
+    <div class="pi-reveal">
+      <span class="pi-label">02</span>
+      <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 .3rem;">Tell me about the project.</h2>
+      <p style="color:var(--c-text-secondary);max-width:48ch;margin-bottom:var(--sp-5);">A useful brief does not need to be polished. Give me enough context to understand what exists, what is changing and what success should look like.</p>
+      <form id="pi-form" data-validate novalidate action="https://formspree.io/f/mwlkobae" method="POST">
+        <input type="hidden" name="_subject" value="New project inquiry — taiwoatlas.dev">
+        <div class="pi-field">
+          <span class="num">01</span>
+          <label for="f-name">Your name *</label>
+          <input id="f-name" name="name" type="text" required>
+          <span class="err">Enter your name.</span>
+        </div>
+        <div class="pi-field">
+          <span class="num">02</span>
+          <label for="f-email">Email *</label>
+          <input id="f-email" name="email" type="email" required>
+          <span class="err">Enter a valid email address.</span>
+        </div>
+        <div class="pi-field">
+          <span class="num">03</span>
+          <label for="f-org">Organisation</label>
+          <input id="f-org" name="org" type="text" placeholder="Company, ministry, publication, platform…">
+        </div>
+        <div class="pi-field">
+          <span class="num">04</span>
+          <label for="f-what">What does it do? *</label>
+          <span class="hint">The short version — what exists, who is it for, what does it do?</span>
+          <textarea id="f-what" name="what" required></textarea>
+          <span class="err">This helps me understand the starting point.</span>
+        </div>
+        <div class="pi-field">
+          <span class="num">05</span>
+          <label for="f-change">What needs to change? *</label>
+          <span class="hint">What prompted this project — what's difficult, unclear, outdated or missing?</span>
+          <textarea id="f-change" name="change" required></textarea>
+          <span class="err">Tell me what's driving this.</span>
+        </div>
+        <div class="pi-field">
+          <span class="num">06</span>
+          <label for="f-who">Who is it for?</label>
+          <input id="f-who" name="who" type="text" placeholder="Who will use this website or product?">
+        </div>
+        <div class="pi-field">
+          <span class="num">07</span>
+          <label>Project type *</label>
+          <div class="pi-list" data-group="ptype">
+            <div class="opt" data-value="New digital experience"><span class="n">01</span><span><span class="t">New digital experience</span><span class="d">Starting from a blank page</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Website redesign"><span class="n">02</span><span><span class="t">Website redesign</span><span class="d">Rebuilding something that exists</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Website / platform build"><span class="n">03</span><span><span class="t">Website / platform build</span><span class="d">A larger, structured build</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Digital product"><span class="n">04</span><span><span class="t">Digital product</span><span class="d">A tool, dashboard or app</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Content / information architecture"><span class="n">05</span><span><span class="t">Content / information architecture</span><span class="d">Structuring what already exists</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Ongoing digital experience"><span class="n">06</span><span><span class="t">Ongoing digital experience</span><span class="d">Continuous iteration, not a one-off</span></span><span class="arr">→</span></div>
+            <div class="opt" data-value="Something else"><span class="n">07</span><span><span class="t">Something else</span><span class="d">Describe it in the brief</span></span><span class="arr">→</span></div>
+          </div>
+          <input type="hidden" name="project_type" id="f-ptype" required>
+          <span class="err" id="err-ptype">Pick the closest option.</span>
+        </div>
+        <div class="pi-field">
+          <span class="num">08</span>
+          <label for="f-current">Current website</label>
+          <input id="f-current" name="current" type="url" placeholder="https://">
+        </div>
+        <div class="pi-field">
+          <span class="num">09</span>
+          <label>Timeline</label>
+          <div class="pi-pills" data-group="timeline">
+            <span class="pill" data-value="No fixed date">No fixed date</span>
+            <span class="pill" data-value="Within 1 month">Within 1 month</span>
+            <span class="pill" data-value="1–3 months">1–3 months</span>
+            <span class="pill" data-value="3–6 months">3–6 months</span>
+            <span class="pill" data-value="Exploring">Exploring</span>
+          </div>
+          <input type="hidden" name="timeline" id="f-timeline">
+        </div>
+        <div class="pi-field">
+          <span class="num">10</span>
+          <label>Preferred contact</label>
+          <div class="pi-pills" data-group="pref">
+            <span class="pill" data-value="Email">Email</span>
+            <span class="pill" data-value="WhatsApp">WhatsApp</span>
+            <span class="pill" data-value="Phone call">Phone call</span>
+          </div>
+          <input type="hidden" name="preferred_contact" id="f-pref">
+        </div>
+        <div class="pi-field">
+          <span class="num">11</span>
+          <label for="f-success">What would make this project a success?</label>
+          <span class="hint">When this is finished, what should be different?</span>
+          <textarea id="f-success" name="success"></textarea>
+        </div>
+        <span class="pi-label">Ready when you are</span>
+        <br>
+        <button type="submit" class="pi-submit">SEND PROJECT BRIEF <span>→</span></button>
+      </form>
+      <div class="pi-success" id="pi-success">
+        <h3>BRIEF RECEIVED.</h3>
+        <p style="color:var(--c-text-secondary);">I'll review what you've sent and respond within one business day.</p>
+        <a href="/index.html">RETURN TO STUDIO →</a>
       </div>
     </div>
-    <form data-validate novalidate action="https://formspree.io/f/mwlkobae" method="POST">
-      <input type="hidden" name="_subject" value="New project inquiry — taiwoatlas.dev">
-      <div class="form-grid">
-        <div class="form-field"><label for="name">Name *</label><input id="name" name="name" type="text" required></div>
-        <div class="form-field"><label for="email">Email *</label><input id="email" name="email" type="email" required><span class="field-error">Enter a valid email address.</span></div>
-        <div class="form-field"><label for="org">Organisation</label><input id="org" name="org" type="text"></div>
-        <div class="form-field">
-          <label for="ptype">Project type *</label>
-          <select id="ptype" name="ptype" required>
-            <option value="">Select one…</option>
-            <option>Full digital experience build</option>
-            <option>Case-study / portfolio architecture</option>
-            <option>Design system & component library</option>
-            <option>Interactive data / system visualization</option>
-            <option>Site audit & rebuild plan</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="form-field full"><label for="desc">Project description *</label><textarea id="desc" name="desc" required placeholder="What does this organisation or product do, and what needs to change?"></textarea></div>
-        <div class="form-field"><label for="timeline">Timeline</label><select id="timeline" name="timeline"><option value="">No fixed date</option><option>Within 1 month</option><option>1–3 months</option><option>3–6 months</option><option>Flexible</option></select></div>
-        <div class="form-field"><label for="budget">Budget range</label><select id="budget" name="budget"><option value="">Prefer not to say</option><option>Under $2,000</option><option>$2,000–$5,000</option><option>$5,000–$15,000</option><option>$15,000+</option></select></div>
-        <div class="form-field"><label for="current">Current website (if any)</label><input id="current" name="current" type="url" placeholder="https://"></div>
-        <div class="form-field"><label for="contact-method">Preferred contact method</label><select id="contact-method" name="contact-method"><option>Email</option><option>Call</option><option>Video call</option></select></div>
-      </div>
-      <button type="submit" class="btn btn-primary">Send project brief</button>
-      <div class="form-status" role="status"></div>
-    </form>
   </div>
 </section>
-
+<section class="pi-section container pi-question pi-reveal" id="process-lead">
+  <h2><span>The best</span> <span>digital work</span> <span>usually starts</span> <span>with a</span> <span>better question.</span></h2>
+</section>
+<section class="pi-section container" id="process" style="padding:var(--sp-6) 0;">
+  <span class="pi-label">03 — Process</span>
+  <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 var(--sp-6);">What happens after you reach out.</h2>
+  <div class="pi-process">
+    <div class="pi-process-line" id="pi-process-line"></div>
+    <div class="pi-stage pi-reveal"><span class="n">01</span><div><h4>Review</h4><p>I read the brief first.</p></div></div>
+    <div class="pi-stage pi-reveal"><span class="n">02</span><div><h4>Conversation</h4><p>We clarify the important parts.</p></div></div>
+    <div class="pi-stage pi-reveal"><span class="n">03</span><div><h4>Direction</h4><p>The project takes shape.</p></div></div>
+    <div class="pi-stage pi-reveal"><span class="n">04</span><div><h4>Build</h4><p>Then we make it real.</p></div></div>
+  </div>
+</section>
+<section class="pi-section container pi-skip pi-reveal" id="direct" style="padding:var(--sp-6) 0;">
+  <span class="pi-label">Skip the form</span>
+  <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 var(--sp-5);">Prefer a direct conversation?</h2>
+  <a class="pi-link-row" href="mailto:taiwoatlas.dev@gmail.com"><span class="v">taiwoatlas.dev@gmail.com <span class="reveal">SEND AN EMAIL →</span></span></a>
+  <a class="pi-link-row" href="tel:+2349011065513"><span class="v">+234 901 106 5513 <span class="reveal">CALL →</span></span></a>
+  <a class="pi-link-row" href="https://wa.me/2349011065513" target="_blank" rel="noopener"><span class="v">WhatsApp <span class="reveal">START A CONVERSATION →</span></span></a>
+</section>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -177,7 +360,6 @@
         <li><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></li>
         <li><a href="tel:+2349011065513">+234 901 106 5513</a></li>
         <li><a href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp: +234 901 106 5513</a></li>
-
       </div>
     </div>
     <div class="footer-bottom">
@@ -186,10 +368,93 @@
     </div>
   </div>
 </footer>
-
 <script src="/js/search-index.js"></script>
 <script src="/js/app.js"></script>
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.2});
+  document.querySelectorAll('.pi-reveal').forEach(function(el){ reduced ? el.classList.add('in') : io.observe(el); });
 
+  document.querySelectorAll('.pi-list .opt').forEach(function(opt){
+    opt.addEventListener('click', function(){
+      document.querySelectorAll('.pi-list .opt').forEach(function(o){ o.classList.remove('sel'); });
+      opt.classList.add('sel');
+      document.getElementById('f-ptype').value = opt.dataset.value;
+    });
+  });
 
+  document.querySelectorAll('.pi-pills').forEach(function(group){
+    var hiddenId = 'f-' + group.dataset.group;
+    var hidden = document.getElementById(hiddenId);
+    group.querySelectorAll('.pill').forEach(function(p){
+      p.addEventListener('click', function(){
+        group.querySelectorAll('.pill').forEach(function(x){ x.classList.remove('sel'); });
+        p.classList.add('sel');
+        if(hidden) hidden.value = p.dataset.value;
+      });
+    });
+  });
+
+  var form = document.getElementById('pi-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.querySelectorAll('.pi-field.has-err').forEach(function(f){ f.classList.remove('has-err'); });
+    document.getElementById('err-ptype').style.display = 'none';
+    var ok = true;
+    ['f-name','f-email','f-what','f-change'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el.value.trim()){ el.closest('.pi-field').classList.add('has-err'); ok = false; }
+    });
+    if(!document.getElementById('f-ptype').value){ document.getElementById('err-ptype').style.display='block'; ok = false; }
+    if(!ok) return;
+    var btn = form.querySelector('.pi-submit');
+    btn.disabled = true;
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){
+        form.style.display = 'none';
+        document.getElementById('pi-success').classList.add('show');
+      })
+      .catch(function(){ form.submit(); });
+  });
+
+  var proc = document.getElementById('process');
+  var line = document.getElementById('pi-process-line');
+  if(proc && line && !reduced){
+    window.addEventListener('scroll', function(){
+      var r = proc.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var progress = Math.min(1, Math.max(0, (vh - r.top) / (r.height + vh*0.3)));
+      line.style.height = (progress*100) + '%';
+    }, {passive:true});
+  }
+
+  var q = document.querySelectorAll('.pi-question span');
+  var qio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        q.forEach(function(w,i){ setTimeout(function(){ w.classList.add('in'); }, reduced?0:i*120); });
+        qio.disconnect();
+      }
+    });
+  },{threshold:.5});
+  if(q.length) qio.observe(document.getElementById('process-lead'));
+
+  var idx = document.querySelectorAll('.pi-index [data-idx]');
+  if(idx.length){
+    var sections = ['intro','brief','process','direct'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          idx.forEach(function(d){ d.classList.toggle('active', d.dataset.idx === e.target.id); });
+        }
+      });
+    },{threshold:.4});
+    sections.forEach(function(s){ sio.observe(s); });
+  }
+})();
+</script>
 </body>
 </html>
