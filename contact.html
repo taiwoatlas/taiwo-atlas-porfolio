@@ -4,18 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start a Project — Taiwo Atlas</title>
-<meta name="description" content="Start a project with Taiwo Atlas — the first conversation starts with the problem, not a service menu.">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Construct your project brief — an interactive intake experience by Taiwo Atlas.">
 <meta name="theme-color" content="#0a0e16">
 <link rel="canonical" href="https://taiwoatlas.dev/contact.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Start a Project — Taiwo Atlas">
-<meta property="og:description" content="Build something worth returning to. Tell me what is changing, what is not working, or what needs to exist.">
-<meta property="og:image" content="/assets/logo/taiwo-atlas-logo.png">
-<meta property="og:url" content="https://taiwoatlas.dev/contact.html">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/logo/taiwo-atlas-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,97 +16,161 @@
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/pages.css">
 <style>
-.pi{--pi-line:var(--c-border);--pi-accent:var(--c-accent);}
-.pi-grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;
-  background-image:linear-gradient(var(--pi-line) 1px,transparent 1px),linear-gradient(90deg,var(--pi-line) 1px,transparent 1px);
-  background-size:64px 64px;}
-.pi-section{position:relative;z-index:1;}
-.pi-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-text-muted);}
-.pi-hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:var(--sp-6) 0 var(--sp-5);}
-.pi-hero-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--sp-5);}
-.pi-hero h1{font-family:var(--font-display);font-size:var(--f-display);line-height:.98;font-weight:500;margin:0;max-width:16ch;}
-.pi-hero h1 span{display:block;opacity:0;transform:translateY(.4em);animation:piline .9s cubic-bezier(.2,.7,.2,1) forwards;}
-.pi-hero h1 span:nth-child(2){animation-delay:.12s}
-.pi-hero h1 span:nth-child(3){animation-delay:.24s;color:var(--pi-accent);}
-@keyframes piline{to{opacity:1;transform:translateY(0)}}
-.pi-hero-sub{max-width:46ch;color:var(--c-text-secondary);margin-top:var(--sp-5);font-size:1.1rem;opacity:0;animation:pifade .8s ease .5s forwards;}
+*{cursor:none}
+input,textarea,a,button{cursor:none}
+@media(pointer:coarse){*{cursor:auto!important}}
+#tacur{position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--c-accent);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;mix-blend-mode:difference}
+#tacur.big{width:52px;height:52px}
+#tacur span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.05em;color:#fff;opacity:0;white-space:nowrap}
+#tacur.big span{opacity:1}
+@media(pointer:coarse){#tacur{display:none}}
+
+#taload{position:fixed;inset:0;z-index:99999;background:var(--c-canvas);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .7s cubic-bezier(.6,0,.2,1),opacity .5s .2s;}
+#taload.out{transform:translateY(-100%);opacity:0;pointer-events:none}
+#taload .lbl{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.14em;color:var(--c-text-muted)}
+#taload .pct{font-family:var(--font-display);font-size:4rem;margin:1rem 0;color:var(--c-text)}
+#taload .bar{width:min(280px,70vw);height:1px;background:var(--pi-line,#232c40)}
+#taload .fill{height:100%;width:0;background:var(--c-accent)}
+
+.pi{--pi-line:var(--c-border);--pi-accent:var(--c-accent)}
+.pi-grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;background-image:linear-gradient(var(--pi-line) 1px,transparent 1px),linear-gradient(90deg,var(--pi-line) 1px,transparent 1px);background-size:64px 64px}
+.pi-section{position:relative;z-index:1}
+.pi-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-text-muted)}
+.pi-hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:var(--sp-6) 0 var(--sp-5)}
+.pi-hero-head{display:flex;justify-content:space-between;margin-bottom:var(--sp-5)}
+.pi-hero h1{font-family:var(--font-display);font-size:var(--f-display);line-height:.98;font-weight:500;margin:0}
+.pi-hero h1 span{display:block;opacity:0;transform:translateY(.4em) scaleY(1.3);animation:piline .9s cubic-bezier(.2,.7,.2,1) forwards}
+.pi-hero h1 span:nth-child(2){animation-delay:.1s}
+.pi-hero h1 span:nth-child(3){animation-delay:.2s;color:var(--pi-accent)}
+@keyframes piline{to{opacity:1;transform:translateY(0) scaleY(1)}}
+.pi-hero-sub{max-width:40ch;color:var(--c-text-secondary);margin-top:var(--sp-5);font-size:1.1rem;opacity:0;animation:pifade .8s ease .5s forwards}
 @keyframes pifade{to{opacity:1}}
-.pi-rule{height:1px;background:var(--pi-line);width:0;margin-top:var(--sp-6);animation:piwidth 1.1s cubic-bezier(.2,.7,.2,1) .7s forwards;}
-@keyframes piwidth{to{width:100%}}
-.pi-scroll{display:flex;align-items:center;gap:.5rem;margin-top:var(--sp-4);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:var(--c-text-muted);opacity:0;animation:pifade .8s ease .9s forwards;}
-.pi-scroll svg{animation:pibounce 1.8s ease-in-out infinite;}
-@keyframes pibounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-.pi-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--sp-6);align-items:start;}
-.pi-panel{position:sticky;top:6rem;}
-.pi-panel .pi-name{font-family:var(--font-display);font-size:2.2rem;margin:0 0 var(--sp-4);}
-.pi-meta{font-family:var(--font-mono);font-size:.78rem;color:var(--c-text-muted);letter-spacing:.08em;margin-bottom:var(--sp-5);}
-.pi-link-row{display:block;padding:var(--sp-3) 0;border-top:1px solid var(--pi-line);position:relative;text-decoration:none;color:var(--c-text);}
-.pi-link-row:last-child{border-bottom:1px solid var(--pi-line);}
-.pi-link-row .k{display:block;font-size:.7rem;font-family:var(--font-mono);color:var(--c-text-muted);text-transform:uppercase;letter-spacing:.1em;}
-.pi-link-row .v{display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;margin-top:.2rem;}
-.pi-link-row .reveal{font-family:var(--font-mono);font-size:.72rem;color:var(--pi-accent);opacity:0;transform:translateX(-6px);transition:all .25s ease;}
-.pi-link-row:hover .reveal{opacity:1;transform:translateX(0);}
-.pi-link-row:hover .v{color:var(--pi-accent);}
-.pi-field{position:relative;margin-bottom:var(--sp-6);padding-bottom:var(--sp-2);}
-.pi-field .num{font-family:var(--font-mono);font-size:.75rem;color:var(--c-text-muted);}
-.pi-field label{display:block;font-size:.95rem;font-weight:600;margin-top:.3rem;}
-.pi-field .hint{font-size:.85rem;color:var(--c-text-muted);margin-top:.2rem;}
-.pi-field input[type=text],.pi-field input[type=email],.pi-field input[type=url],.pi-field textarea{
-  width:100%;background:transparent;border:0;border-bottom:1px solid var(--pi-line);color:var(--c-text);
-  font-size:1.1rem;padding:.6rem .1rem;outline:none;font-family:var(--font-sans);resize:vertical;transition:border-color .2s;}
-.pi-field textarea{min-height:4.5rem;}
-.pi-field input:focus,.pi-field textarea:focus{border-color:var(--pi-accent);}
-.pi-field .err{display:none;color:var(--c-error);font-size:.8rem;margin-top:.3rem;}
-.pi-field.has-err .err{display:block;}
-.pi-field.has-err input,.pi-field.has-err textarea{border-color:var(--c-error);}
-.pi-list{border-top:1px solid var(--pi-line);}
-.pi-list .opt{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) .2rem;border-bottom:1px solid var(--pi-line);cursor:pointer;transition:padding .2s;}
-.pi-list .opt:hover{padding-left:.6rem;}
-.pi-list .opt .n{font-family:var(--font-mono);font-size:.75rem;color:var(--c-text-muted);width:2rem;flex-shrink:0;}
-.pi-list .opt .t{font-weight:600;}
-.pi-list .opt .d{font-size:.82rem;color:var(--c-text-muted);display:block;}
-.pi-list .opt .arr{margin-left:auto;opacity:0;transition:opacity .2s;color:var(--pi-accent);}
-.pi-list .opt:hover .arr{opacity:1;}
-.pi-list .opt.sel{color:var(--pi-accent);}
-.pi-list .opt.sel .n{color:var(--pi-accent);}
-.pi-list .opt.sel .arr{opacity:1;}
-.pi-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem;}
-.pi-pills .pill{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.04em;padding:.5rem .9rem;border:1px solid var(--pi-line);border-radius:999px;cursor:pointer;color:var(--c-text-secondary);transition:all .2s;}
-.pi-pills .pill:hover{border-color:var(--pi-accent);color:var(--c-text);}
-.pi-pills .pill.sel{background:var(--pi-accent);border-color:var(--pi-accent);color:var(--c-inverse);}
-.pi-submit{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.9rem;letter-spacing:.06em;padding:1.1rem 1.8rem;background:var(--c-text);color:var(--c-inverse);border:0;border-radius:2px;cursor:pointer;transition:transform .2s,gap .2s;margin-top:var(--sp-5);}
-.pi-submit:hover{transform:translateX(2px);gap:.9rem;}
-.pi-submit:disabled{opacity:.5;cursor:default;}
-.pi-success{display:none;padding:var(--sp-6) 0;}
-.pi-success.show{display:block;}
-.pi-success h3{font-family:var(--font-display);font-size:2rem;margin-bottom:var(--sp-3);}
-.pi-success a{display:inline-block;margin-top:var(--sp-4);color:var(--pi-accent);font-family:var(--font-mono);font-size:.85rem;}
-.pi-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
-.pi-reveal.in{opacity:1;transform:translateY(0);}
-.pi-process{display:grid;gap:var(--sp-6);position:relative;}
-.pi-process::before{content:"";position:absolute;left:1.1rem;top:0;bottom:0;width:1px;background:var(--pi-line);}
-.pi-process-line{position:absolute;left:1.1rem;top:0;width:1px;background:var(--pi-accent);height:0;transition:height .3s ease;}
-.pi-stage{display:flex;gap:var(--sp-4);position:relative;padding-left:2.4rem;}
-.pi-stage .n{position:absolute;left:0;font-family:var(--font-mono);font-size:.9rem;color:var(--c-text-muted);background:var(--c-canvas);width:2.2rem;}
-.pi-stage h4{font-family:var(--font-display);font-size:1.3rem;margin:0 0 .3rem;}
-.pi-stage p{color:var(--c-text-secondary);margin:0;max-width:40ch;}
-.pi-question{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;}
-.pi-question h2{font-family:var(--font-display);font-size:clamp(2rem,4vw+1rem,4rem);line-height:1.15;max-width:18ch;}
-.pi-question span{display:inline;opacity:.15;transition:opacity .6s ease;}
-.pi-question span.in{opacity:1;}
-.pi-index{position:fixed;right:var(--sp-5);top:50%;transform:translateY(-50%);z-index:5;font-family:var(--font-mono);font-size:.72rem;color:var(--c-text-muted);}
-.pi-index .t{letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;opacity:.7;}
-.pi-index div[data-idx]{padding:.25rem 0;transition:color .2s;}
-.pi-index div[data-idx].active{color:var(--pi-accent);}
-@media (max-width:1100px){.pi-index{display:none;}.pi-layout{grid-template-columns:1fr;}.pi-panel{position:static;}}
-@media (prefers-reduced-motion:reduce){
-  .pi-hero h1 span,.pi-hero-sub,.pi-rule,.pi-scroll{animation:none!important;opacity:1!important;transform:none!important;width:100%!important;}
-  .pi-reveal{opacity:1!important;transform:none!important;}
-  .pi-scroll svg{animation:none!important;}
-}
+.pi-scroll{display:flex;align-items:center;gap:.6rem;margin-top:var(--sp-5);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:var(--c-text-muted)}
+.pi-scroll i{width:1px;height:28px;background:var(--pi-line);position:relative;overflow:hidden}
+.pi-scroll i::after{content:"";position:absolute;top:-28px;left:0;width:100%;height:100%;background:var(--pi-accent);animation:scrl 1.6s ease-in-out infinite}
+@keyframes scrl{to{top:28px}}
+
+#taprog{position:fixed;top:0;left:0;height:2px;background:var(--pi-accent);z-index:50;width:0}
+.pi-secnum{position:fixed;left:var(--sp-5);top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:.72rem;color:var(--c-text-muted);z-index:5}
+@media(max-width:1100px){.pi-secnum{display:none}}
+
+.pi-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:var(--sp-6);align-items:start}
+.pi-panel{position:sticky;top:6rem}
+.pi-panel .pi-name{font-family:var(--font-display);font-size:2.2rem;margin:0 0 var(--sp-4)}
+.pi-meta{font-family:var(--font-mono);font-size:.78rem;color:var(--c-text-muted);letter-spacing:.08em;margin-bottom:var(--sp-5)}
+.pi-link-row{display:block;padding:var(--sp-3) 0;border-top:1px solid var(--pi-line);text-decoration:none;color:var(--c-text)}
+.pi-link-row:last-child{border-bottom:1px solid var(--pi-line)}
+.pi-link-row .v{display:flex;justify-content:space-between;align-items:center;font-size:1.02rem}
+.pi-link-row .reveal{font-family:var(--font-mono);font-size:.7rem;color:var(--pi-accent);opacity:0;transform:translateX(-6px);transition:all .25s}
+.pi-link-row:hover .reveal{opacity:1;transform:translateX(0)}
+.pi-link-row:hover .v{color:var(--pi-accent)}
+
+#brief{min-height:90vh}
+.pb-wrap{border-top:1px solid var(--pi-line);padding-top:var(--sp-5)}
+.pb-track{height:1px;background:var(--pi-line);position:relative;margin-bottom:var(--sp-5)}
+.pb-track i{position:absolute;left:0;top:0;height:100%;background:var(--pi-accent);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.pb-screen{display:none}
+.pb-screen.active{display:block;animation:pbIn .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes pbIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.pb-num{font-family:var(--font-mono);font-size:.78rem;color:var(--c-text-muted)}
+.pb-q{font-family:var(--font-display);font-size:clamp(1.6rem,3vw+.5rem,2.6rem);margin:.5rem 0 var(--sp-4);max-width:18ch}
+.pb-screen input[type=text],.pb-screen input[type=email],.pb-screen input[type=url],.pb-screen textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--pi-line);color:var(--c-text);font-size:1.3rem;padding:.6rem .1rem;outline:none;font-family:var(--font-sans);resize:vertical}
+.pb-screen textarea{min-height:4.5rem}
+.pb-screen input:focus,.pb-screen textarea:focus{border-color:var(--pi-accent)}
+.pb-err{color:var(--c-error);font-size:.82rem;margin-top:.5rem;display:none}
+.pb-err.show{display:block}
+.pb-nav{display:flex;gap:1rem;margin-top:var(--sp-5);align-items:center}
+.pb-btn{font-family:var(--font-mono);font-size:.85rem;background:var(--c-text);color:var(--c-inverse);border:0;padding:.85rem 1.4rem;border-radius:2px}
+.pb-btn.ghost{background:transparent;color:var(--c-text-muted);border:1px solid var(--pi-line)}
+.pb-hint{font-family:var(--font-mono);font-size:.7rem;color:var(--c-text-muted)}
+
+.pb-wall{border-top:1px solid var(--pi-line);margin-top:var(--sp-6);padding-top:var(--sp-4)}
+.pb-wall-item{padding:.5rem 0;font-size:.92rem;border-bottom:1px dashed var(--pi-line)}
+.pb-wall-item .k{display:block;font-family:var(--font-mono);font-size:.68rem;color:var(--c-text-muted);text-transform:uppercase}
+
+.pb-const{display:flex;justify-content:center;margin:var(--sp-4) 0}
+.pb-const svg{max-width:100%;height:auto}
+.pb-node{cursor:none}
+.pb-node circle{fill:var(--c-surface-2);stroke:var(--pi-line);stroke-width:1;transition:all .3s}
+.pb-node text{fill:var(--c-text-secondary);font-family:var(--font-mono);font-size:9px;text-anchor:middle;transition:fill .3s}
+.pb-node.sel circle{fill:var(--pi-accent);stroke:var(--pi-accent)}
+.pb-node.sel text{fill:var(--c-inverse)}
+.pb-node:hover circle{stroke:var(--pi-accent)}
+.pb-const line{stroke:var(--pi-line);stroke-width:1;transition:stroke .3s}
+.pb-const line.sel{stroke:var(--pi-accent)}
+
+.pb-timeline{margin:var(--sp-4) 0}
+.pb-tl-track{position:relative;height:2px;background:var(--pi-line);margin:2.2rem .6rem}
+.pb-tl-fill{position:absolute;left:0;top:0;height:100%;background:var(--pi-accent);width:0;transition:width .25s}
+.pb-tl-handle{position:absolute;top:50%;width:16px;height:16px;background:var(--pi-accent);border-radius:50%;transform:translate(-50%,-50%);left:0;touch-action:none}
+.pb-tl-labels{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.65rem;color:var(--c-text-muted)}
+.pb-tl-labels span.sel{color:var(--pi-accent)}
+
+.pb-submit-wrap{position:relative;display:inline-block;margin-top:var(--sp-5)}
+.pb-submit{font-family:var(--font-mono);font-size:.9rem;letter-spacing:.06em;padding:1.1rem 1.8rem;background:var(--c-text);color:var(--c-inverse);border:0;border-radius:2px;position:relative;transition:transform .15s}
+
+.pb-review{display:none}
+.pb-review.active{display:block;animation:pbIn .5s}
+.pb-review-item{padding:.7rem 0;border-bottom:1px solid var(--pi-line);display:flex;justify-content:space-between;gap:1rem}
+.pb-review-item .k{font-family:var(--font-mono);font-size:.7rem;color:var(--c-text-muted);text-transform:uppercase}
+.pb-review-item .edit{font-family:var(--font-mono);font-size:.7rem;color:var(--pi-accent);flex-shrink:0}
+
+.pb-success{display:none;text-align:center;padding:var(--sp-6) 0}
+.pb-success.active{display:block}
+.pb-success svg{margin:0 auto var(--sp-4)}
+.pb-success path{stroke-dasharray:60;stroke-dashoffset:60;animation:draw 1s ease forwards .2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pb-success h3{font-family:var(--font-display);font-size:2rem}
+
+.pi-process{display:grid;gap:var(--sp-5)}
+.pi-stage{padding-left:2rem;position:relative;opacity:.4;transition:opacity .4s}
+.pi-stage.active{opacity:1}
+.pi-stage .n{position:absolute;left:0;font-family:var(--font-mono);font-size:.85rem;color:var(--c-text-muted)}
+.pi-stage.active .n{color:var(--pi-accent)}
+.pi-stage h4{font-family:var(--font-display);font-size:1.3rem;margin:0 0 .3rem}
+.pi-stage p{color:var(--c-text-secondary);margin:0}
+
+.pi-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.pi-reveal.in{opacity:1;transform:translateY(0)}
+.pmap{border-top:1px solid var(--pi-line);margin-top:var(--sp-5);padding-top:var(--sp-4)}
+.pmap svg{width:100%;height:auto}
+.pmap-node circle{fill:var(--c-surface-2);stroke:var(--pi-line);transition:all .4s}
+.pmap-node text{fill:var(--c-text-muted);font-family:var(--font-mono);font-size:7px;text-anchor:middle;transition:fill .4s}
+.pmap-node.on circle{fill:var(--pi-accent);stroke:var(--pi-accent)}
+.pmap-node.on text{fill:var(--c-inverse)}
+.pmap line{stroke:var(--pi-line);stroke-width:1;stroke-dasharray:60;stroke-dashoffset:60;transition:stroke-dashoffset .6s ease,stroke .4s}
+.pmap line.on{stroke:var(--pi-accent);stroke-dashoffset:0}
+.pmap-pct{font-family:var(--font-mono);font-size:.7rem;color:var(--c-text-muted);margin-top:.6rem;text-align:center}
+.pmap-pct b{color:var(--pi-accent)}
+
+.pb-const circle{transition:r .2s,fill .2s,stroke .2s}
+
+.pi-stage-wrap{position:relative}
+.pi-stage-line{position:absolute;left:10px;top:0;bottom:0;width:1px;background:var(--pi-line)}
+.pi-stage-line path{fill:none;stroke:var(--pi-accent);stroke-width:1.5}
+
+.taload-collapse #main{animation:none}
+.pb-submit-seq .pmap-node,.pb-submit-seq line{animation:seqpulse 1.4s ease}
+@keyframes seqpulse{0%,100%{opacity:1}50%{opacity:.3}}
+#submit-ripple{position:fixed;left:50%;top:50%;width:4px;height:4px;border:1px solid var(--pi-accent);border-radius:50%;transform:translate(-50%,-50%);opacity:0;pointer-events:none;z-index:9998}
+#submit-ripple.go{animation:ripple 1s ease-out forwards}
+@keyframes ripple{0%{opacity:1;width:4px;height:4px}100%{opacity:0;width:900px;height:900px}}
+
+.pi-final{min-height:70vh;display:flex;flex-direction:column;justify-content:center;padding:var(--sp-6) 0}
+.pi-final h2{font-family:var(--font-display);font-size:clamp(2.2rem,5vw+1rem,4.8rem);line-height:1.05;max-width:16ch}
+.pi-final h2 .acc{color:var(--pi-accent)}
+.pi-final .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:var(--sp-6);flex-wrap:wrap;gap:var(--sp-4)}
+.pi-final-cta{font-family:var(--font-mono);font-size:.95rem;letter-spacing:.06em;padding:1.2rem 2rem;background:var(--c-text);color:var(--c-inverse);border:0;border-radius:2px;text-decoration:none;display:inline-block;transition:transform .15s}
+
+@media(max-width:1100px){.pi-layout{grid-template-columns:1fr}.pi-panel{position:static}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#taload{display:none}}
 </style>
 </head>
 <body>
+<div id="tacur"><span></span></div>
+<div id="taload"><span class="lbl">TA / PROJECT INTAKE</span><span class="pct">0%</span><span class="lbl" id="taload-status">INITIALISING...</span><div class="bar"><div class="fill" id="taload-fill"></div></div></div>
+<div id="taprog"></div>
+
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header>
   <div class="header-inner">
@@ -123,337 +179,434 @@
       <span class="brand-mark">TAIWO ATLAS<small>Digital Experience Builder</small></span>
     </a>
     <nav class="nav-primary" aria-label="Primary">
-      <a href="/work.html">Work</a>
-<a href="/about.html">About</a>
-<a href="/capabilities.html">Capabilities</a>
-<a href="/services.html">Services</a>
-<a href="/journal.html">Journal</a>
-<a href="/contact.html" class="is-active">Contact</a>
+      <a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active">Contact</a>
     </nav>
     <div class="header-actions">
-      <button class="cmdk-trigger" data-cmdk-trigger aria-label="Open search (Command K)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Search <kbd>&#8984;K</kbd>
-      </button>
-      <a href="/contact.html" class="btn btn-outline is-active" style="padding:.5rem .9rem;" aria-current="page">Start a project</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span>
-      </button>
+      <a href="/contact.html" class="btn btn-outline is-active" style="padding:.5rem .9rem;">Start a project</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-top">
-    <span class="brand-mark"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" class="brand-icon" width="30" height="30" style="display:inline-block;vertical-align:middle;margin-right:.5rem;border-radius:50%;">TAIWO ATLAS</span>
-    <button class="mobile-menu-close" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-  </div>
-  <nav class="mobile-menu-links" aria-label="Mobile">
-    <a href="/work.html">Work</a>
-<a href="/about.html">About</a>
-<a href="/capabilities.html">Capabilities</a>
-<a href="/services.html">Services</a>
-<a href="/journal.html">Journal</a>
-<a href="/contact.html" class="is-active">Contact</a>
-  </nav>
-  <div class="mobile-menu-foot">
-    <span><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></span>
-    <span><a href="tel:+2349011065513">+234 901 106 5513</a></span>
-  </div>
+  <div class="mobile-menu-top"><span class="brand-mark">TAIWO ATLAS</span><button class="mobile-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <nav class="mobile-menu-links" aria-label="Mobile"><a href="/work.html">Work</a><a href="/about.html">About</a><a href="/capabilities.html">Capabilities</a><a href="/services.html">Services</a><a href="/journal.html">Journal</a><a href="/contact.html" class="is-active">Contact</a></nav>
 </div>
-<div class="cmdk-overlay" data-cmdk-overlay>
-  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Search">
-    <div class="cmdk-input-row">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input class="cmdk-input" type="text" placeholder="Search projects, pages, articles…" aria-label="Search">
-      <span class="cmdk-esc">ESC</span>
-    </div>
-    <div class="cmdk-results"></div>
-  </div>
-</div>
+
 <div class="pi-grid" aria-hidden="true"></div>
+<div class="pi-secnum" id="secnum">01</div>
+
 <main id="main" class="pi">
-<div class="pi-index" aria-hidden="true">
-  <div class="t">Project Brief</div>
-  <div data-idx="intro">01 / Intro</div>
-  <div data-idx="brief">02 / Brief</div>
-  <div data-idx="process">03 / Process</div>
-  <div data-idx="direct">04 / Direct</div>
-</div>
 <section class="pi-section pi-hero container" id="intro">
-  <div class="pi-hero-head">
-    <span class="pi-label">TA / Project intake — 01</span>
-    <span class="pi-label">Lagos — Global</span>
-  </div>
-  <h1><span>Build something</span><span>worth returning</span><span>to.</span></h1>
-  <p class="pi-hero-sub">Tell me what is changing, what is not working, or what needs to exist. The first conversation starts with the problem — not a service menu.</p>
-  <div class="pi-rule"></div>
-  <div class="pi-scroll">SCROLL TO BEGIN <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
+  <div class="pi-hero-head"><span class="pi-label">Project intake / 01</span><span class="pi-label">Lagos — Nigeria</span></div>
+  <h1><span>START</span><span>A PROJECT.</span></h1>
+  <p class="pi-hero-sub">Tell me what is changing, what is not working, or what needs to exist. You're not filling out a form — you're building the brief.</p>
+  <div class="pi-scroll">SCROLL TO BEGIN <i></i></div>
 </section>
+
 <section class="pi-section container" id="brief" style="padding:var(--sp-6) 0;">
   <div class="pi-layout">
     <div class="pi-panel pi-reveal">
-      <span class="pi-label">02 — Contact</span>
+      <span class="pi-label">Contact</span>
       <h2 class="pi-name" style="margin-top:.5rem;">TAIWO ATLAS</h2>
       <div class="pi-meta">LAGOS / NIGERIA<br>REMOTE / GLOBAL</div>
-      <a class="pi-link-row" href="mailto:taiwoatlas.dev@gmail.com">
-        <span class="k">Email</span>
-        <span class="v">taiwoatlas.dev@gmail.com <span class="reveal">SEND AN EMAIL →</span></span>
-      </a>
-      <a class="pi-link-row" href="https://wa.me/2349011065513" target="_blank" rel="noopener">
-        <span class="k">WhatsApp</span>
-        <span class="v">+234 901 106 5513 <span class="reveal">START A CONVERSATION →</span></span>
-      </a>
-      <a class="pi-link-row" href="tel:+2349011065513">
-        <span class="k">Phone</span>
-        <span class="v">+234 901 106 5513 <span class="reveal">CALL →</span></span>
-      </a>
+      <a class="pi-link-row" href="mailto:taiwoatlas.dev@gmail.com"><span class="v">Email <span class="reveal">SEND EMAIL →</span></span></a>
+      <a class="pi-link-row" href="https://wa.me/2349011065513" target="_blank" rel="noopener"><span class="v">WhatsApp <span class="reveal">OPEN WHATSAPP →</span></span></a>
+      <a class="pi-link-row" href="tel:+2349011065513"><span class="v">Phone <span class="reveal">CALL →</span></span></a>
+      <div class="pmap">
+        <span class="pi-label">Project map</span>
+        <svg viewBox="0 0 220 180" id="pmap">
+          <line x1="110" y1="90" x2="110" y2="30" data-node="audience"/>
+          <line x1="110" y1="90" x2="175" y2="60" data-node="purpose"/>
+          <line x1="110" y1="90" x2="175" y2="130" data-node="direction"/>
+          <line x1="110" y1="90" x2="45" y2="130" data-node="problem"/>
+          <line x1="110" y1="90" x2="45" y2="60" data-node="experience"/>
+          <g class="pmap-node" id="pmap-center"><circle cx="110" cy="90" r="20"/><text x="110" y="93">PROJECT</text></g>
+          <g class="pmap-node" data-node="audience"><circle cx="110" cy="30" r="14"/><text x="110" y="33">AUDIENCE</text></g>
+          <g class="pmap-node" data-node="purpose"><circle cx="175" cy="60" r="14"/><text x="175" y="63">PURPOSE</text></g>
+          <g class="pmap-node" data-node="direction"><circle cx="175" cy="130" r="14"/><text x="175" y="133">DIRECTION</text></g>
+          <g class="pmap-node" data-node="problem"><circle cx="45" cy="130" r="14"/><text x="45" y="133">PROBLEM</text></g>
+          <g class="pmap-node" data-node="experience"><circle cx="45" cy="60" r="14"/><text x="45" y="63">EXPERIENCE</text></g>
+        </svg>
+        <div class="pmap-pct">PROJECT SYSTEM — <b id="pmap-pctval">0%</b> FORMED</div>
+      </div>
+      <div class="pb-wall" id="pbwall"><span class="pi-label">Your brief</span></div>
     </div>
-    <div class="pi-reveal">
-      <span class="pi-label">02</span>
-      <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 .3rem;">Tell me about the project.</h2>
-      <p style="color:var(--c-text-secondary);max-width:48ch;margin-bottom:var(--sp-5);">A useful brief does not need to be polished. Give me enough context to understand what exists, what is changing and what success should look like.</p>
-      <form id="pi-form" data-validate novalidate action="https://formspree.io/f/mwlkobae" method="POST">
-        <input type="hidden" name="_subject" value="New project inquiry — taiwoatlas.dev">
-        <div class="pi-field">
-          <span class="num">01</span>
-          <label for="f-name">Your name *</label>
-          <input id="f-name" name="name" type="text" required>
-          <span class="err">Enter your name.</span>
+
+    <div class="pb-wrap pi-reveal">
+      <div class="pb-track"><i id="pbfill"></i></div>
+      <form id="pb-form" novalidate>
+      <div class="pb-screen active" data-step="0" data-key="name" data-req="1">
+        <span class="pb-num">01 / 08</span><h3 class="pb-q">What's your name?</h3>
+        <input type="text" id="q-name"><span class="pb-err">Tell me your name.</span>
+      </div>
+      <div class="pb-screen" data-step="1" data-key="email" data-req="1">
+        <span class="pb-num">02 / 08</span><h3 class="pb-q">And your email?</h3>
+        <input type="email" id="q-email"><span class="pb-err">Enter a valid email address.</span>
+      </div>
+      <div class="pb-screen" data-step="2" data-key="org">
+        <span class="pb-num">03 / 08</span><h3 class="pb-q">Organisation?</h3>
+        <input type="text" id="q-org" placeholder="Company, ministry, platform…">
+      </div>
+      <div class="pb-screen" data-step="3" data-key="what" data-req="1">
+        <span class="pb-num">04 / 08</span><h3 class="pb-q">What does it do?</h3>
+        <textarea id="q-what"></textarea><span class="pb-err">Give me the short version.</span>
+      </div>
+      <div class="pb-screen" data-step="4" data-key="change" data-req="1">
+        <span class="pb-num">05 / 08</span><h3 class="pb-q">What needs to change?</h3>
+        <textarea id="q-change"></textarea><span class="pb-err">What's driving this project?</span>
+      </div>
+      <div class="pb-screen" data-step="5" data-key="ptype" data-req="1">
+        <span class="pb-num">06 / 08</span><h3 class="pb-q">What kind of project is this?</h3>
+        <div class="pb-const"><svg viewBox="0 0 320 260" width="320" height="260" id="const"></svg></div>
+        <span class="pb-err" id="ptype-err">Pick the closest option.</span>
+      </div>
+      <div class="pb-screen" data-step="6" data-key="timeline">
+        <span class="pb-num">07 / 08</span><h3 class="pb-q">Timeline?</h3>
+        <div class="pb-timeline">
+          <div class="pb-tl-track"><div class="pb-tl-fill" id="tlfill"></div><div class="pb-tl-handle" id="tlhandle" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"></div></div>
+          <div class="pb-tl-labels"><span data-v="Now">Now</span><span data-v="1 month">1mo</span><span data-v="3 months">3mo</span><span data-v="6 months">6mo</span><span data-v="No fixed date">Flexible</span></div>
         </div>
-        <div class="pi-field">
-          <span class="num">02</span>
-          <label for="f-email">Email *</label>
-          <input id="f-email" name="email" type="email" required>
-          <span class="err">Enter a valid email address.</span>
-        </div>
-        <div class="pi-field">
-          <span class="num">03</span>
-          <label for="f-org">Organisation</label>
-          <input id="f-org" name="org" type="text" placeholder="Company, ministry, publication, platform…">
-        </div>
-        <div class="pi-field">
-          <span class="num">04</span>
-          <label for="f-what">What does it do? *</label>
-          <span class="hint">The short version — what exists, who is it for, what does it do?</span>
-          <textarea id="f-what" name="what" required></textarea>
-          <span class="err">This helps me understand the starting point.</span>
-        </div>
-        <div class="pi-field">
-          <span class="num">05</span>
-          <label for="f-change">What needs to change? *</label>
-          <span class="hint">What prompted this project — what's difficult, unclear, outdated or missing?</span>
-          <textarea id="f-change" name="change" required></textarea>
-          <span class="err">Tell me what's driving this.</span>
-        </div>
-        <div class="pi-field">
-          <span class="num">06</span>
-          <label for="f-who">Who is it for?</label>
-          <input id="f-who" name="who" type="text" placeholder="Who will use this website or product?">
-        </div>
-        <div class="pi-field">
-          <span class="num">07</span>
-          <label>Project type *</label>
-          <div class="pi-list" data-group="ptype">
-            <div class="opt" data-value="New digital experience"><span class="n">01</span><span><span class="t">New digital experience</span><span class="d">Starting from a blank page</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Website redesign"><span class="n">02</span><span><span class="t">Website redesign</span><span class="d">Rebuilding something that exists</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Website / platform build"><span class="n">03</span><span><span class="t">Website / platform build</span><span class="d">A larger, structured build</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Digital product"><span class="n">04</span><span><span class="t">Digital product</span><span class="d">A tool, dashboard or app</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Content / information architecture"><span class="n">05</span><span><span class="t">Content / information architecture</span><span class="d">Structuring what already exists</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Ongoing digital experience"><span class="n">06</span><span><span class="t">Ongoing digital experience</span><span class="d">Continuous iteration, not a one-off</span></span><span class="arr">→</span></div>
-            <div class="opt" data-value="Something else"><span class="n">07</span><span><span class="t">Something else</span><span class="d">Describe it in the brief</span></span><span class="arr">→</span></div>
-          </div>
-          <input type="hidden" name="project_type" id="f-ptype" required>
-          <span class="err" id="err-ptype">Pick the closest option.</span>
-        </div>
-        <div class="pi-field">
-          <span class="num">08</span>
-          <label for="f-current">Current website</label>
-          <input id="f-current" name="current" type="url" placeholder="https://">
-        </div>
-        <div class="pi-field">
-          <span class="num">09</span>
-          <label>Timeline</label>
-          <div class="pi-pills" data-group="timeline">
-            <span class="pill" data-value="No fixed date">No fixed date</span>
-            <span class="pill" data-value="Within 1 month">Within 1 month</span>
-            <span class="pill" data-value="1–3 months">1–3 months</span>
-            <span class="pill" data-value="3–6 months">3–6 months</span>
-            <span class="pill" data-value="Exploring">Exploring</span>
-          </div>
-          <input type="hidden" name="timeline" id="f-timeline">
-        </div>
-        <div class="pi-field">
-          <span class="num">10</span>
-          <label>Preferred contact</label>
-          <div class="pi-pills" data-group="pref">
-            <span class="pill" data-value="Email">Email</span>
-            <span class="pill" data-value="WhatsApp">WhatsApp</span>
-            <span class="pill" data-value="Phone call">Phone call</span>
-          </div>
-          <input type="hidden" name="preferred_contact" id="f-pref">
-        </div>
-        <div class="pi-field">
-          <span class="num">11</span>
-          <label for="f-success">What would make this project a success?</label>
-          <span class="hint">When this is finished, what should be different?</span>
-          <textarea id="f-success" name="success"></textarea>
-        </div>
-        <span class="pi-label">Ready when you are</span>
-        <br>
-        <button type="submit" class="pi-submit">SEND PROJECT BRIEF <span>→</span></button>
+      </div>
+      <div class="pb-screen" data-step="7" data-key="success">
+        <span class="pb-num">08 / 08</span><h3 class="pb-q">What would success look like?</h3>
+        <textarea id="q-success" placeholder="When this is finished, what should be different?"></textarea>
+      </div>
       </form>
-      <div class="pi-success" id="pi-success">
+
+      <div class="pb-review" id="pbreview">
+        <span class="pi-label">Review</span>
+        <h3 style="font-family:var(--font-display);font-size:1.8rem;margin:.4rem 0 var(--sp-4);">Your project brief</h3>
+        <div id="pbreview-items"></div>
+      </div>
+
+      <div class="pb-success" id="pbsuccess">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="var(--pi-accent)" stroke-width="1.5"/><path d="M18 32l10 10 18-20" stroke="var(--pi-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>BRIEF RECEIVED.</h3>
-        <p style="color:var(--c-text-secondary);">I'll review what you've sent and respond within one business day.</p>
-        <a href="/index.html">RETURN TO STUDIO →</a>
+        <p style="color:var(--c-text-secondary);margin:.6rem 0 var(--sp-4);">I'll review what you've sent and respond within one business day.</p>
+        <a href="/index.html" class="pb-hint">RETURN TO STUDIO →</a>
+      </div>
+
+      <div class="pb-nav" id="pbnav">
+        <button type="button" class="pb-btn ghost" id="pbback">← Back</button>
+        <div class="pb-submit-wrap"><button type="button" class="pb-btn" id="pbnext">Continue →</button></div>
+        <span class="pb-hint">Enter ↵</span>
       </div>
     </div>
   </div>
 </section>
-<section class="pi-section container pi-question pi-reveal" id="process-lead">
-  <h2><span>The best</span> <span>digital work</span> <span>usually starts</span> <span>with a</span> <span>better question.</span></h2>
-</section>
+
 <section class="pi-section container" id="process" style="padding:var(--sp-6) 0;">
-  <span class="pi-label">03 — Process</span>
-  <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 var(--sp-6);">What happens after you reach out.</h2>
-  <div class="pi-process">
-    <div class="pi-process-line" id="pi-process-line"></div>
-    <div class="pi-stage pi-reveal"><span class="n">01</span><div><h4>Review</h4><p>I read the brief first.</p></div></div>
-    <div class="pi-stage pi-reveal"><span class="n">02</span><div><h4>Conversation</h4><p>We clarify the important parts.</p></div></div>
-    <div class="pi-stage pi-reveal"><span class="n">03</span><div><h4>Direction</h4><p>The project takes shape.</p></div></div>
-    <div class="pi-stage pi-reveal"><span class="n">04</span><div><h4>Build</h4><p>Then we make it real.</p></div></div>
+  <span class="pi-label">How the work moves</span>
+  <div class="pi-stage-wrap" style="margin-top:var(--sp-5);">
+    <svg class="pi-stage-line" width="2" height="100%" style="overflow:visible;"><path id="stagepath" d="M1,0 L1,1000"/></svg>
+    <div class="pi-process">
+      <div class="pi-stage" data-s="0"><span class="n">01</span><h4>Review</h4><p>I read the brief first.</p></div>
+      <div class="pi-stage" data-s="1"><span class="n">02</span><h4>Conversation</h4><p>We clarify the important parts.</p></div>
+      <div class="pi-stage" data-s="2"><span class="n">03</span><h4>Direction</h4><p>The project takes shape.</p></div>
+      <div class="pi-stage" data-s="3"><span class="n">04</span><h4>Build</h4><p>Then we make it real.</p></div>
+    </div>
   </div>
 </section>
-<section class="pi-section container pi-skip pi-reveal" id="direct" style="padding:var(--sp-6) 0;">
-  <span class="pi-label">Skip the form</span>
-  <h2 style="font-family:var(--font-display);font-size:2rem;margin:.4rem 0 var(--sp-5);">Prefer a direct conversation?</h2>
-  <a class="pi-link-row" href="mailto:taiwoatlas.dev@gmail.com"><span class="v">taiwoatlas.dev@gmail.com <span class="reveal">SEND AN EMAIL →</span></span></a>
-  <a class="pi-link-row" href="tel:+2349011065513"><span class="v">+234 901 106 5513 <span class="reveal">CALL →</span></span></a>
-  <a class="pi-link-row" href="https://wa.me/2349011065513" target="_blank" rel="noopener"><span class="v">WhatsApp <span class="reveal">START A CONVERSATION →</span></span></a>
+
+<section class="pi-section container pi-final pi-reveal">
+  <span class="pi-label">TA / 2026 — Lagos / Global</span>
+  <h2>THE BEST DIGITAL WORK <span class="acc">STARTS WITH A BETTER QUESTION.</span></h2>
+  <div class="row">
+    <p style="max-width:34ch;color:var(--c-text-secondary);">Information architecture. Interface design. Frontend engineering. One discipline, applied to every project.</p>
+    <a href="#intro" class="pi-final-cta" id="finalcta">START A PROJECT →</a>
+  </div>
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-col">
-        <div class="footer-brand-line"><img src="/assets/logo/taiwo-atlas-icon.png" alt="" width="28" height="28" style="display:inline-block;vertical-align:middle;border-radius:50%;margin-right:.5rem;">TAIWO ATLAS</div>
-        <p style="color:var(--c-text-secondary);max-width:32ch;font-size:.92rem;">Digital experience builder — information architecture, interface design and front-end engineering for organisations, professionals and platforms.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="/work.html">Work</a>
-        <a href="/about.html">About</a>
-        <a href="/journal.html">Journal</a>
-        <a href="/search.html">Search</a>
-      </div>
-      <div class="footer-col">
-        <h4>Studio</h4>
-        <a href="/capabilities.html">Capabilities</a>
-        <a href="/services.html">Services</a>
-        <a href="/experience.html">Experience</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <li><a href="mailto:taiwoatlas.dev@gmail.com">taiwoatlas.dev@gmail.com</a></li>
-        <li><a href="tel:+2349011065513">+234 901 106 5513</a></li>
-        <li><a href="https://wa.me/2349011065513" target="_blank" rel="noopener">WhatsApp: +234 901 106 5513</a></li>
-      </div>
-    </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Taiwo Atlas. All projects documented.</span>
+      <span>&copy; 2026 Taiwo Atlas.</span>
       <span>Built with restraint, not gradients.</span>
     </div>
   </div>
 </footer>
+
 <script src="/js/search-index.js"></script>
 <script src="/js/app.js"></script>
 <script>
 (function(){
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.2});
-  document.querySelectorAll('.pi-reveal').forEach(function(el){ reduced ? el.classList.add('in') : io.observe(el); });
+var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var touch = matchMedia('(pointer:coarse)').matches;
 
-  document.querySelectorAll('.pi-list .opt').forEach(function(opt){
-    opt.addEventListener('click', function(){
-      document.querySelectorAll('.pi-list .opt').forEach(function(o){ o.classList.remove('sel'); });
-      opt.classList.add('sel');
-      document.getElementById('f-ptype').value = opt.dataset.value;
+/* loader */
+var load = document.getElementById('taload');
+if(sessionStorage.getItem('ta-loaded') || reduced){ load.style.display='none'; }
+else{
+  var pct=0, fill=document.getElementById('taload-fill'), pctEl=load.querySelector('.pct'), status=document.getElementById('taload-status');
+  var msgs=['INITIALISING...','LOADING ASSETS...','ALMOST THERE...'];
+  var t=setInterval(function(){
+    pct = Math.min(100, pct + Math.floor(Math.random()*18)+6);
+    pctEl.textContent = pct+'%'; fill.style.width = pct+'%';
+    status.textContent = msgs[Math.min(msgs.length-1, Math.floor(pct/34))];
+    if(pct>=100){ clearInterval(t); setTimeout(function(){ load.classList.add('out'); sessionStorage.setItem('ta-loaded','1'); },250); }
+  }, 220);
+}
+
+/* cursor */
+if(!touch){
+  var cur=document.getElementById('tacur'), cx=0,cy=0,mx=0,my=0;
+  addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; });
+  (function raf(){ cx+=(mx-cx)*.2; cy+=(my-cy)*.2; cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)'; requestAnimationFrame(raf); })();
+  document.querySelectorAll('a,button,.pb-node,input,textarea').forEach(function(el){
+    el.addEventListener('mouseenter', function(){
+      cur.classList.add('big');
+      var label = el.closest('#pbnext')?'SEND →':el.classList.contains('pb-node')?'SELECT':el.tagName==='INPUT'||el.tagName==='TEXTAREA'?'':'VIEW →';
+      cur.querySelector('span').textContent = el.id==='pbnext'?'SEND →':label;
     });
+    el.addEventListener('mouseleave', function(){ cur.classList.remove('big'); });
   });
+}
 
-  document.querySelectorAll('.pi-pills').forEach(function(group){
-    var hiddenId = 'f-' + group.dataset.group;
-    var hidden = document.getElementById(hiddenId);
-    group.querySelectorAll('.pill').forEach(function(p){
-      p.addEventListener('click', function(){
-        group.querySelectorAll('.pill').forEach(function(x){ x.classList.remove('sel'); });
-        p.classList.add('sel');
-        if(hidden) hidden.value = p.dataset.value;
-      });
-    });
+/* progress + section number + reveals + stage activation, all scroll-driven */
+var prog=document.getElementById('taprog'), secnum=document.getElementById('secnum');
+var secs=[{id:'intro',n:'01'},{id:'brief',n:'02'},{id:'process',n:'03'}];
+function onScroll(){
+  var h=document.documentElement; var p=(h.scrollTop)/(h.scrollHeight-h.clientHeight);
+  prog.style.width=(p*100)+'%';
+  secs.forEach(function(s){ var r=document.getElementById(s.id).getBoundingClientRect(); if(r.top<innerHeight*.5 && r.bottom>innerHeight*.5) secnum.textContent=s.n; });
+}
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.2});
+document.querySelectorAll('.pi-reveal').forEach(function(el){ reduced?el.classList.add('in'):io.observe(el); });
+
+var sio=new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle('active', e.isIntersecting); }); },{threshold:.6});
+document.querySelectorAll('.pi-stage').forEach(function(s){ sio.observe(s); });
+
+/* constellation */
+var types=[{v:'New experience',x:70,y:60},{v:'Redesign',x:250,y:60},{v:'Platform',x:30,y:160},{v:'Digital product',x:290,y:160},{v:'Information architecture',x:90,y:230},{v:'Other',x:230,y:230}];
+var svg=document.getElementById('const'), cx0=160,cy0=130, answers={};
+types.forEach(function(t){
+  var l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',cx0);l.setAttribute('y1',cy0);l.setAttribute('x2',t.x);l.setAttribute('y2',t.y);l.dataset.v=t.v; svg.appendChild(l);
+});
+var center=document.createElementNS('http://www.w3.org/2000/svg','circle');
+center.setAttribute('cx',cx0);center.setAttribute('cy',cy0);center.setAttribute('r',22);center.setAttribute('fill','var(--c-surface)');center.setAttribute('stroke','var(--pi-line)');svg.appendChild(center);
+var ctext=document.createElementNS('http://www.w3.org/2000/svg','text');
+ctext.setAttribute('x',cx0);ctext.setAttribute('y',cy0+3);ctext.setAttribute('text-anchor','middle');ctext.setAttribute('font-size','8');ctext.setAttribute('fill','var(--c-text-muted)');ctext.setAttribute('font-family','monospace');ctext.textContent='PROJECT';svg.appendChild(ctext);
+types.forEach(function(t){
+  var g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','pb-node'); g.dataset.v=t.v;
+  var c=document.createElementNS('http://www.w3.org/2000/svg','circle'); c.setAttribute('cx',t.x);c.setAttribute('cy',t.y);c.setAttribute('r',26);
+  var tx=document.createElementNS('http://www.w3.org/2000/svg','text'); tx.setAttribute('x',t.x);tx.setAttribute('y',t.y+3);
+  var words=t.v.split(' '); tx.textContent = words.length>1 ? words[0] : t.v;
+  g.appendChild(c); g.appendChild(tx); svg.appendChild(g);
+  g.addEventListener('click', function(){
+    svg.querySelectorAll('.pb-node').forEach(function(n){n.classList.remove('sel');});
+    svg.querySelectorAll('line').forEach(function(l){l.classList.remove('sel');});
+    g.classList.add('sel'); svg.querySelector('line[data-v="'+t.v+'"]').classList.add('sel');
+    answers.ptype=t.v; document.getElementById('ptype-err').classList.remove('show');
+    updateWall();
   });
+});
 
-  var form = document.getElementById('pi-form');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    document.querySelectorAll('.pi-field.has-err').forEach(function(f){ f.classList.remove('has-err'); });
-    document.getElementById('err-ptype').style.display = 'none';
-    var ok = true;
-    ['f-name','f-email','f-what','f-change'].forEach(function(id){
-      var el = document.getElementById(id);
-      if(!el.value.trim()){ el.closest('.pi-field').classList.add('has-err'); ok = false; }
-    });
-    if(!document.getElementById('f-ptype').value){ document.getElementById('err-ptype').style.display='block'; ok = false; }
-    if(!ok) return;
-    var btn = form.querySelector('.pi-submit');
-    btn.disabled = true;
-    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
-      .then(function(r){
-        form.style.display = 'none';
-        document.getElementById('pi-success').classList.add('show');
-      })
-      .catch(function(){ form.submit(); });
+/* timeline drag */
+var tlVals=['Now','1 month','3 months','6 months','No fixed date'];
+var track=document.querySelector('.pb-tl-track'), handle=document.getElementById('tlhandle'), tlfill=document.getElementById('tlfill'), tlIdx=0;
+function setTl(i){
+  tlIdx=Math.max(0,Math.min(4,i));
+  var pct=tlIdx/4*100;
+  handle.style.left=pct+'%'; tlfill.style.width=pct+'%'; handle.setAttribute('aria-valuenow',tlIdx);
+  document.querySelectorAll('.pb-tl-labels span').forEach(function(s,j){ s.classList.toggle('sel', j===tlIdx); });
+  answers.timeline=tlVals[tlIdx]; updateWall();
+}
+function dragTl(clientX){
+  var r=track.getBoundingClientRect(); var p=Math.max(0,Math.min(1,(clientX-r.left)/r.width));
+  setTl(Math.round(p*4));
+}
+handle.addEventListener('pointerdown', function(e){
+  handle.setPointerCapture(e.pointerId);
+  function move(ev){ dragTl(ev.clientX); }
+  function up(){ handle.removeEventListener('pointermove',move); handle.removeEventListener('pointerup',up); }
+  handle.addEventListener('pointermove',move); handle.addEventListener('pointerup',up);
+});
+handle.addEventListener('keydown', function(e){ if(e.key==='ArrowRight') setTl(tlIdx+1); if(e.key==='ArrowLeft') setTl(tlIdx-1); });
+track.addEventListener('click', function(e){ dragTl(e.clientX); });
+setTl(0);
+
+/* live answer wall */
+function updateWall(){
+  var wall=document.getElementById('pbwall');
+  wall.innerHTML='<span class="pi-label">Your brief</span>';
+  var labels={name:'Name',email:'Email',org:'Organisation',what:'What it does',change:"What's changing",ptype:'Project type',timeline:'Timeline',success:'Success looks like'};
+  Object.keys(answers).forEach(function(k){
+    if(!answers[k]) return;
+    var d=document.createElement('div'); d.className='pb-wall-item';
+    d.innerHTML='<span class="k">'+labels[k]+'</span>'+String(answers[k]).slice(0,60);
+    wall.appendChild(d);
   });
+}
 
-  var proc = document.getElementById('process');
-  var line = document.getElementById('pi-process-line');
-  if(proc && line && !reduced){
-    window.addEventListener('scroll', function(){
-      var r = proc.getBoundingClientRect();
-      var vh = window.innerHeight;
-      var progress = Math.min(1, Math.max(0, (vh - r.top) / (r.height + vh*0.3)));
-      line.style.height = (progress*100) + '%';
-    }, {passive:true});
+/* stepper */
+var steps=Array.from(document.querySelectorAll('.pb-screen')), cur=0;
+var fieldMap={0:'q-name',1:'q-email',2:'q-org',3:'q-what',4:'q-change',6:null,7:'q-success'};
+function show(i){
+  steps.forEach(function(s){ s.classList.remove('active'); });
+  if(i<steps.length){ steps[i].classList.add('active'); document.getElementById('pbfill').style.width=((i+1)/steps.length*100)+'%'; }
+  document.getElementById('pbback').style.visibility = i===0?'hidden':'visible';
+  document.getElementById('pbnext').textContent = i===steps.length-1 ? 'Review →' : 'Continue →';
+}
+function collect(i){
+  var key=steps[i].dataset.key, fid=fieldMap[i];
+  if(fid){ answers[key]=document.getElementById(fid).value.trim(); }
+  updateWall();
+}
+function valid(i){
+  var s=steps[i];
+  if(s.dataset.req){
+    if(s.dataset.key==='ptype') return !!answers.ptype;
+    var fid=fieldMap[i], val=document.getElementById(fid).value.trim();
+    if(s.dataset.key==='email') return /\S+@\S+\.\S+/.test(val);
+    return val.length>0;
   }
+  return true;
+}
+function showErr(i,on){
+  var s=steps[i]; var err=s.dataset.key==='ptype'?document.getElementById('ptype-err'):s.querySelector('.pb-err');
+  if(err) err.classList.toggle('show', !!on);
+}
+document.getElementById('pbnext').addEventListener('click', function(){
+  collect(cur);
+  if(!valid(cur)){ showErr(cur,true); return; }
+  showErr(cur,false);
+  if(cur===steps.length-1){ showReview(); return; }
+  cur++; show(cur);
+});
+document.getElementById('pbback').addEventListener('click', function(){ if(cur>0){ cur--; show(cur); } });
+document.getElementById('pb-form').addEventListener('keydown', function(e){
+  if(e.key==='Enter' && e.target.tagName!=='TEXTAREA'){ e.preventDefault(); document.getElementById('pbnext').click(); }
+});
+show(0);
 
-  var q = document.querySelectorAll('.pi-question span');
-  var qio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        q.forEach(function(w,i){ setTimeout(function(){ w.classList.add('in'); }, reduced?0:i*120); });
-        qio.disconnect();
-      }
-    });
-  },{threshold:.5});
-  if(q.length) qio.observe(document.getElementById('process-lead'));
+function showReview(){
+  document.getElementById('pb-form').style.display='none';
+  var rv=document.getElementById('pbreview'); rv.classList.add('active');
+  var box=document.getElementById('pbreview-items'); box.innerHTML='';
+  var labels={name:'Name',email:'Email',org:'Organisation',what:'What it does',change:"What's changing",ptype:'Project type',timeline:'Timeline',success:'Success looks like'};
+  Object.keys(labels).forEach(function(k,idx){
+    var row=document.createElement('div'); row.className='pb-review-item';
+    row.innerHTML='<div><span class="k">'+labels[k]+'</span><br>'+(answers[k]||'—')+'</div><span class="edit" data-i="'+idx+'">EDIT</span>';
+    box.appendChild(row);
+  });
+  box.querySelectorAll('.edit').forEach(function(e){ e.addEventListener('click', function(){ rv.classList.remove('active'); document.getElementById('pb-form').style.display='block'; cur=+e.dataset.i; show(cur); }); });
+  document.getElementById('pbnext').textContent='Send brief →';
+}
 
-  var idx = document.querySelectorAll('.pi-index [data-idx]');
-  if(idx.length){
-    var sections = ['intro','brief','process','direct'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
-    var sio = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          idx.forEach(function(d){ d.classList.toggle('active', d.dataset.idx === e.target.id); });
-        }
-      });
-    },{threshold:.4});
-    sections.forEach(function(s){ sio.observe(s); });
+/* magnetic submit + final send */
+var nextBtn=document.getElementById('pbnext');
+if(!touch){
+  nextBtn.addEventListener('mousemove', function(e){
+    var r=nextBtn.getBoundingClientRect();
+    nextBtn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)';
+  });
+  nextBtn.addEventListener('mouseleave', function(){ nextBtn.style.transform=''; });
+}
+
+/* ===== PROJECT MAP / DOSSIER ===== */
+var mapKeys={what:'experience',change:'problem',ptype:'direction',timeline:'direction',success:'purpose'};
+function updateMap(){
+  var filled=Object.keys(answers).filter(function(k){return answers[k];});
+  var total=8, pct=Math.round(filled.length/total*100);
+  document.getElementById('pmap-pctval').textContent=pct+'%';
+  var active={};
+  if(answers.what) active.experience=1;
+  if(answers.change) active.problem=1;
+  if(answers.ptype) active.direction=1;
+  if(answers.success) active.purpose=1;
+  if(answers.org||answers.name) active.audience=1;
+  document.querySelectorAll('.pmap-node[data-node]').forEach(function(n){
+    n.classList.toggle('on', !!active[n.dataset.node]);
+  });
+  document.querySelectorAll('#pmap line[data-node]').forEach(function(l){
+    l.classList.toggle('on', !!active[l.dataset.node]);
+  });
+  document.getElementById('pmap-center').classList.toggle('on', pct>50);
+}
+var _oldUpdateWall=updateWall;
+updateWall=function(){ _oldUpdateWall(); updateMap(); };
+
+/* ===== PROXIMITY ORBITAL NODES ===== */
+svg.addEventListener('mousemove', function(e){
+  var r=svg.getBoundingClientRect(); var scale=220/r.width;
+  var px=(e.clientX-r.left)*scale, py=(e.clientY-r.top)*scale;
+  svg.querySelectorAll('.pb-node circle').forEach(function(c){
+    var cx=+c.getAttribute('cx'), cy=+c.getAttribute('cy');
+    var d=Math.hypot(px-cx,py-cy);
+    var s=d<60?1+(60-d)/60*.25:1;
+    c.setAttribute('r', 26*s);
+  });
+});
+
+/* ===== SCROLL VELOCITY ON HERO ===== */
+var lastY=scrollY, vel=0, heroH1=document.querySelector('.pi-hero h1');
+function velLoop(){
+  var dy=scrollY-lastY; lastY=scrollY; vel += (Math.abs(dy)-vel)*.15;
+  if(heroH1 && !reduced){
+    var ls=Math.min(vel*.05,3);
+    heroH1.style.letterSpacing=ls+'px';
+    heroH1.style.filter = vel>18 ? 'blur('+Math.min(vel*.03,1.5)+'px)' : 'none';
   }
+  requestAnimationFrame(velLoop);
+}
+if(document.visibilityState==='visible') requestAnimationFrame(velLoop);
+document.addEventListener('visibilitychange', function(){ if(document.visibilityState==='visible') requestAnimationFrame(velLoop); });
+
+/* ===== PROCESS STAGE PATH DRAW ===== */
+var stagePath=document.getElementById('stagepath');
+if(stagePath){
+  var totalLen = stagePath.getTotalLength ? stagePath.getTotalLength() : 1000;
+  stagePath.style.strokeDasharray=totalLen; stagePath.style.strokeDashoffset=totalLen;
+  var stageWrap=document.querySelector('.pi-stage-wrap');
+  addEventListener('scroll', function(){
+    if(!stageWrap) return;
+    var r=stageWrap.getBoundingClientRect();
+    var p=Math.min(1,Math.max(0,(innerHeight*.7 - r.top)/r.height));
+    stagePath.style.strokeDashoffset = totalLen*(1-p);
+  },{passive:true});
+}
+
+/* ===== MAGNETIC FINAL CTA ===== */
+var finalCta=document.getElementById('finalcta');
+if(finalCta && !touch){
+  finalCta.addEventListener('mousemove', function(e){
+    var r=finalCta.getBoundingClientRect();
+    finalCta.style.transform='translate('+((e.clientX-r.left-r.width/2)*.2)+'px,'+((e.clientY-r.top-r.height/2)*.2)+'px)';
+  });
+  finalCta.addEventListener('mouseleave', function(){ finalCta.style.transform=''; });
+}
+
+/* ===== CURSOR: EDIT STATE ===== */
+if(!touch){
+  document.body.addEventListener('mouseover', function(e){
+    if(e.target.classList && e.target.classList.contains('edit')){ cur.classList.add('big'); cur.querySelector('span').textContent='EDIT'; }
+  });
+}
+
+/* ===== SUBMISSION SEQUENCE (overrides earlier simple handler) ===== */
+var ripple=document.createElement('div'); ripple.id='submit-ripple'; document.body.appendChild(ripple);
+nextBtn.addEventListener('click', function(){
+  if(!document.getElementById('pbreview').classList.contains('active')) return;
+  if(nextBtn.dataset.sending) return; nextBtn.dataset.sending='1';
+  document.getElementById('pmap').parentElement.classList.add('pb-submit-seq');
+  var data=new FormData(); Object.keys(answers).forEach(function(k){ data.append(k, answers[k]); });
+  var req=fetch('https://formspree.io/f/mwlkobae',{method:'POST',body:data,headers:{'Accept':'application/json'}}).catch(function(){});
+  setTimeout(function(){
+    var r=document.getElementById('submit-ripple'); var btnR=nextBtn.getBoundingClientRect();
+    r.style.left=(btnR.left+btnR.width/2)+'px'; r.style.top=(btnR.top+btnR.height/2)+'px'; r.classList.add('go');
+  }, reduced?0:700);
+  req.finally(function(){
+    setTimeout(function(){
+      document.getElementById('pbreview').classList.remove('active');
+      document.getElementById('pbnav').style.display='none';
+      document.getElementById('pbsuccess').classList.add('active');
+    }, reduced?0:900);
+  });
+});
 })();
 </script>
 </body>
