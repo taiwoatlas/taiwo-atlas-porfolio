@@ -32,10 +32,10 @@
 .contact a:focus-visible,.contact button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
 /* hero */
-.hero{min-height:calc(100svh - 72px);padding:clamp(3rem,9vh,6rem) 0 2.5rem;display:flex;flex-direction:column}
+.hero{min-height:calc(100svh - 72px);padding:calc(var(--hero-offset,0px) + clamp(3rem,9vh,6rem)) 0 2.5rem;display:flex;flex-direction:column}
 .hero .grid{flex:1;align-content:space-between;row-gap:3rem}
-.hero .label{grid-column:1/-1;display:flex;align-items:center;gap:1rem}
-.hero .label::after{content:'';width:3.5rem;height:1px;background:var(--line2)}
+.hero p.label{grid-column:1/-1;display:flex;align-items:center;gap:1rem}
+.hero p.label::after{content:'';width:3.5rem;height:1px;background:var(--line2)}
 .hero h1{grid-column:1/9;font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.6rem,8.6vw,8.25rem);line-height:.98;letter-spacing:-.035em;margin:0}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
 .hero h1 .line>span{display:block}
@@ -174,7 +174,7 @@ textarea.in{min-height:9rem;resize:none;line-height:1.65;padding-top:1rem}
 }
 /* mobile */
 @media(max-width:767px){
-  .hero{min-height:auto;padding-top:2.5rem}
+  .hero{min-height:auto;padding-top:calc(var(--hero-offset,0px) + 2.5rem)}
   .opts{grid-template-columns:1fr}
   .btn-send{width:100%}
   .direct a{grid-template-columns:1fr auto}.direct .label{grid-column:1/-1}
@@ -573,7 +573,7 @@ function updateProgress(i){
 }
 function initProgress(){
   var h = document.querySelector('[data-header]');
-  if(h){ var pos = getComputedStyle(h).position; if(pos==='fixed'||pos==='sticky') document.documentElement.style.setProperty('--header-h', h.offsetHeight+'px'); }
+  if(h){ var pos = getComputedStyle(h).position; if(pos==='fixed'||pos==='sticky') document.documentElement.style.setProperty('--header-h', h.offsetHeight+'px'); if(pos==='fixed') document.documentElement.style.setProperty('--hero-offset', h.offsetHeight+'px'); }
   updateProgress(0);
   if(!('IntersectionObserver' in window)) return;
   var io = new IntersectionObserver(function(entries){
